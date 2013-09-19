@@ -1,19 +1,16 @@
 <?php
-//$root = $_SERVER['DOCUMENT_ROOT'] . "/tp/";
+//$root = $_SERVER['DOCUMENT_ROOT'] . "/public_html/";
 require_once(/*$root .*/ "common/mysql.php.inc");
 
-$db = "tp" ;
+$db = "isaumon" ;
 
 function getNumberOfPosts()
 {
 	global $db;
 
-	$q = "SELECT count(*) as 'nb' from posts";
+	$q = "SELECT count(*) as 'nb' from recettes";
 	$res = readData($db, $q);
-	if( $res )
-		return $res[0]['nb'];
-	else
-		return -1;
+	return $res;
 }
 
 function getPostsFromPage($pageNb, $postsPerPage)
