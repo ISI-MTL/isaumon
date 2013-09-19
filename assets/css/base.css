@@ -1,0 +1,68 @@
+html, body, p, h1, h2, h3, h4, h5, h6, img, ul, li 
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+@font-face
+{
+	font-family: "Lato";
+	src: url("../assets/police/lato/");
+}
+
+@font-face
+{
+	font-family: Source;
+	src: url("../police/source-sans-pro/SourceSansPro-Regular.otf");
+}
+
+
+
+.container
+{
+	width: 80%;
+	margin: auto;
+}
+
+/*************************************************
+Header
+**************************************************/
+header
+{
+	height: 96px;
+	border-bottom: 11px solid #4f5059;
+}
+
+header img 
+{
+	height: 96px;
+	width: 96px;
+}
+
+header ul
+{
+	margin-top: 38px;
+	float: right;
+	list-style-type: none;
+}
+
+header li 
+{
+	padding: 4px 24px;
+	float: left;
+	border-left: 1px solid #a0a0a5;
+}
+
+header li:first-of-type
+{
+	border-left: 0;
+}
+
+header li a 
+{
+	font-size: 20px;
+	color: #4f5059;
+	font-family: "Source";
+	text-decoration: none;
+}
