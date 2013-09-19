@@ -1,1 +1,3 @@
-Accueil :)
+<div class="container">
+	Accueil :)
+</div>

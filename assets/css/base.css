@@ -7,14 +7,26 @@ html, body, p, h1, h2, h3, h4, h5, h6, img, ul, li
 
 @font-face
 {
-	font-family: "Lato";
-	src: url("../assets/police/lato/");
+	font-family: Lato;
+	src: url("../police/lato/Lato-Reg.ttf");
+}
+
+@font-face
+{
+	font-family: LatoBold;
+	src: url("../police/lato/Lato-Bol.ttf");
 }
 
 @font-face
 {
 	font-family: Source;
 	src: url("../police/source-sans-pro/SourceSansPro-Regular.otf");
+}
+
+@font-face
+{
+	font-family: Fontello;
+	src: url("../police/fontello.ttf");
 }
 
 
@@ -65,4 +77,67 @@ header li a
 	color: #4f5059;
 	font-family: "Source";
 	text-decoration: none;
+}
+
+/*************************************************
+Footer
+**************************************************/
+footer
+{
+	background-color: #4f5059;
+	height: 71px;
+	color: white;
+	font-family: "Lato";
+	font-size: 14px;
+}
+
+#resaux-sociaux
+{
+	margin-top: 10px;
+	float: left;
+}
+
+#resaux-sociaux img
+{
+	margin-top: 3px;
+	width: 28px;
+	height: 28px;
+}
+
+#footer-droite
+{
+	float: right;
+}
+
+
+footer ul 
+{
+	list-style-type: none;
+	margin-top: 15px;
+}
+
+footer li 
+{
+	float: left;
+	padding: 0 10px;
+	border-right: 1px solid #cccccf;
+}
+
+footer li:last-of-type
+{
+	border-right: none;
+	padding-right: 0;
+}
+
+footer li a 
+{
+	font-family: "LatoBold";
+	font-size: 14px;
+	color: white;
+	text-decoration: none;
+}
+
+#footer-droite p 
+{
+	text-align: right
 }
