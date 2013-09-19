@@ -13,6 +13,18 @@ html, body, p, h1, h2, h3, h4, h5, h6, img, ul, li
 
 @font-face
 {
+	font-family: LatoBlack;
+	src: url("../police/lato/Lato-Bla.ttf");
+}
+
+@font-face
+{
+	font-family: LatoHairline;
+	src: url("../police/lato/Lato-Hair.ttf");
+}
+
+@font-face
+{
 	font-family: LatoBold;
 	src: url("../police/lato/Lato-Bol.ttf");
 }
@@ -52,6 +64,16 @@ header img
 	width: 96px;
 }
 
+header span
+{
+	font-size: 10px;
+	font-family: LatoHairline;
+	position: relative;
+	top: -5px;
+	left: -99px;
+	color: #4f5059;
+}
+
 header ul
 {
 	margin-top: 38px;
@@ -77,6 +99,31 @@ header li a
 	color: #4f5059;
 	font-family: "Source";
 	text-decoration: none;
+}
+
+header li a:hover
+{
+	color: salmon;
+}
+
+/*************************************************
+Contenu de la page
+**************************************************/
+#contenu
+{
+	background-color: #ebeaf0;
+	padding-top: 20px;
+}
+
+#contenu h1
+{
+	background-color: white;
+	font-family: LatoBlack;
+	font-size: 48px;
+	color: #4f5059;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 15px;
 }
 
 /*************************************************
@@ -137,7 +184,13 @@ footer li a
 	text-decoration: none;
 }
 
+footer li a:hover
+{
+	color: salmon;
+}
+
 #footer-droite p 
 {
-	text-align: right
+	text-align: right;
+	margin-top: 40px;
 }
