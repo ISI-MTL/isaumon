@@ -51,8 +51,10 @@
 		?>
 	</head>
 	<body>
+		<!-- Header -->
 		<?php include("includes/header.php.inc"); ?>
 
+		<!-- Contenu -->
 		<div id="contenu">
 			<?php
 			if( isset($_GET['page']) )
@@ -67,13 +69,14 @@
 			}
 			else
 			{
-				// la variagle get "page" n'est pas initialisée
-				// redirige vers la page d'accueil
+				// la variable GET "page" n'est pas initialisée
+				// inclus la page d'accueil
 				include("accueil.php");
 			}
 			?>
 		</div>
 
+		<!-- Footer -->
 		<?php include("includes/footer.php.inc") ?>
 	</body>
 </html>
