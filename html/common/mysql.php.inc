@@ -52,7 +52,7 @@ function readData($dbName, $query)
 	}
 }
 
-function insert_update_data($dbName, $query)
+function insertUpdateData($dbName, $query)
 {
 	//create the db connection
 	$connection = createConnection();

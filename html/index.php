@@ -65,6 +65,8 @@
 				else
 				{
 					// le fichier n'existe pas
+					// inclus la page d'accueil
+					include("accueil.php");
 				}
 			}
 			else
