@@ -36,17 +36,17 @@
 		<?php
 		if( isset($_GET['page']) )
 		{
-			if( file_exists("../css/" . $_GET['page'] . ".css") )
-				echo('<link rel="stylesheet" href="../css/' . $_GET["page"] . '.css">');
-			if( file_exists("../js/" . $_GET['page'] . ".js") )
-				echo('<script src="../js/' . $_GET["page"] . '.js"></script>');
+			if( file_exists("../assets/css/" . $_GET['page'] . ".css") )
+				echo('<link rel="stylesheet" href="../assets/css/' . $_GET["page"] . '.css">');
+			if( file_exists("../assets/js/" . $_GET['page'] . ".js") )
+				echo('<script src="../assets/js/' . $_GET["page"] . '.js"></script>');
 		}
 		else
 		{
-			if( file_exists("css/home.css") )
-				echo('<link rel="stylesheet" type="text/css" href="css/home.css">');
-			if( file_exists("js/home.js") )
-				echo('<script src="js/home.js"></script>');
+			if( file_exists("../assets/css/accueil.css") )
+				echo('<link rel="stylesheet" type="text/css" href="../assets/css/accueil.css">');
+			if( file_exists("../assets/js/accueil.js") )
+				echo('<script src="../assets/js/accueil.js"></script>');
 		}
 		?>
 	</head>

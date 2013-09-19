@@ -1,0 +1,22 @@
+article.recette
+{
+	background-color: white;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+article.recette img
+{
+	width: 100%;
+}
+
+article.recette h2
+{
+
+}
+
+article.recette p 
+{
+	color: #4f5059;
+	font-family: "Source";
+}
