@@ -6,6 +6,7 @@ article
 	padding-bottom: 18px;
 	border-bottom: 1px solid #72727a;
 	box-sizing: border-box;
+	display: none;
 }
 
 article > img
