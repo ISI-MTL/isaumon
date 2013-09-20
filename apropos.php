@@ -1,3 +1,3 @@
 <div class="container">
-	formulaire de contact
+	apropos
 </div>

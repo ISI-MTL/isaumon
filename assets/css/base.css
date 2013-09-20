@@ -49,12 +49,12 @@ html, body, p, h1, h2, h3, h4, h5, h6, img, ul, li
 	src: url("../police/fontello.ttf");
 }
 
-
-
 .container
 {
-	width: 100%;
-	margin: auto;
+	float: left;
+	width: 80%;
+	margin-left: 10%;
+	background-color: white;
 }
 
 /*************************************************
@@ -62,9 +62,11 @@ Header
 **************************************************/
 header
 {
-	height: 96px;
+	width: 100%;
+	float: left;
 	border-bottom: 11px solid #4f5059;
 	background-color: white;
+	box-sizing: border-box;
 }
 
 header img 
@@ -121,17 +123,19 @@ Contenu de la page
 #contenu
 {
 	background-color: #ebeaf0;
+	width: 100%;
+	float: left;
 }
 
 #contenu h1
 {
-	background-color: white;
 	font-family: LatoBlack;
 	font-size: 48px;
 	color: #4f5059;
 	padding-left: 5px;
 	padding-bottom: 5px;
 	margin-bottom: 15px;
+	border-bottom: 2px solid #72727a;
 }
 
 #contenu h2
@@ -145,11 +149,18 @@ Footer
 **************************************************/
 footer
 {
+	width: 100%;
+	float: left;
 	background-color: #4f5059;
 	height: 71px;
 	color: white;
 	font-family: "Lato";
 	font-size: 14px;
+}
+
+footer > .container
+{
+	background-color: transparent;
 }
 
 #resaux-sociaux
