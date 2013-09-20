@@ -2,7 +2,7 @@
 //$root = $_SERVER['DOCUMENT_ROOT'] . "/public_html/";
 require_once(/*$root .*/ "common/mysql.php.inc");
 
-$db = "isaumon" ;
+$db = "isaumon";
 
 function getNumberOfPosts()
 {
@@ -90,7 +90,7 @@ function get_id_recette($titre,$commt,$ingrdt,$portion ){
 	        WHERE titre='$titre' and  commentaire='$commt' and ingredients='$ingrdt' and portion='$portion'";
 	$id_recette = readData($db, $q);
 	return $id_recette;
-}
+}*/
 
 
 ?>

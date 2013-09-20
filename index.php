@@ -27,26 +27,26 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 		<!-- Style de base -->
-		<link rel="stylesheet" type="text/css" href="../assets/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/base.css" />
 
 		<!-- Script de base -->
-		<script type="text/javascript" src="../assets/js/base.js">Vous devez activer JavaScript</script>
+		<script type="text/javascript" src="assets/js/base.js">Vous devez activer JavaScript</script>
 
 		<!-- CSS et JS spécifique à la page -->
 		<?php
 		if( isset($_GET['page']) )
 		{
-			if( file_exists("../assets/css/" . $_GET['page'] . ".css") )
-				echo('<link rel="stylesheet" href="../assets/css/' . $_GET["page"] . '.css">');
-			if( file_exists("../assets/js/" . $_GET['page'] . ".js") )
-				echo('<script src="../assets/js/' . $_GET["page"] . '.js"></script>');
+			if( file_exists("assets/css/" . $_GET['page'] . ".css") )
+				echo('<link rel="stylesheet" href="assets/css/' . $_GET["page"] . '.css">');
+			if( file_exists("assets/js/" . $_GET['page'] . ".js") )
+				echo('<script src="assets/js/' . $_GET["page"] . '.js"></script>');
 		}
 		else
 		{
-			if( file_exists("../assets/css/accueil.css") )
-				echo('<link rel="stylesheet" type="text/css" href="../assets/css/accueil.css">');
-			if( file_exists("../assets/js/accueil.js") )
-				echo('<script src="../assets/js/accueil.js"></script>');
+			if( file_exists("assets/css/accueil.css") )
+				echo('<link rel="stylesheet" type="text/css" href="assets/css/accueil.css">');
+			if( file_exists("assets/js/accueil.js") )
+				echo('<script src="assets/js/accueil.js"></script>');
 		}
 		?>
 	</head>
