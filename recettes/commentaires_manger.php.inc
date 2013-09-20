@@ -12,8 +12,8 @@ function insert_commentaire($commt){
 	// d'un tableau'
 	extract($commt);
 	
-	$req ="INSERT INTO $table(titre, contenu, commid, artid, date, auteur, img, recette_id) 
-	VALUES ('$titre', '$contenu', '$commid', '$artid', '$date', '$auteur', '$img', '$recette_id')";
+	$req ="INSERT INTO $table(titre, contenu, commid, date, auteur, img, recette_id) 
+	VALUES ('$titre', '$contenu', '$commid', '$date', '$auteur', '$img', '$recette_id')";
 	
 	$commt = insert_update_data($bd,$req);
 	
