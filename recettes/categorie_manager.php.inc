@@ -1,5 +1,5 @@
 <?php
-require_once(/*$root .*/ "include_isaumon/includBd.php.inc");
+require_once("common/mysql.php.inc");
 $db = 'isaumon';
 
 // Fonction insert categorie

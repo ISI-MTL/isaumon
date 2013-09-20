@@ -1,6 +1,5 @@
 <?php
-//$root = $_SERVER['DOCUMENT_ROOT'] . "/public_html/";
-require_once(/*$root .*/ "common/mysql.php.inc");
+require_once("common/mysql.php.inc");
 
 $db = "isaumon";
 
