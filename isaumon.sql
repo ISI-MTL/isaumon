@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Serveur: localhost
--- Généré le : Ven 20 Septembre 2013 à 08:07
+-- Généré le : Ven 20 Septembre 2013 à 08:14
 -- Version du serveur: 5.1.66
 -- Version de PHP: 5.3.3-7+squeeze14
 
@@ -45,11 +45,11 @@ CREATE TABLE IF NOT EXISTS `article_categorie` (
 
 CREATE TABLE IF NOT EXISTS `categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `titre` varchar(100) NOT NULL,
-  `abbr` varchar(10) NOT NULL,
-  `type` tinyint(1) NOT NULL,
+  `titre` varchar(100) COLLATE utf8_bin NOT NULL,
+  `abbr` varchar(20) COLLATE utf8_bin NOT NULL,
+  `type` bit(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
 --
 -- Contenu de la table `categories`
@@ -63,14 +63,14 @@ CREATE TABLE IF NOT EXISTS `categories` (
 --
 
 CREATE TABLE IF NOT EXISTS `chroniqueurs` (
-  `id` int(100) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(100) NOT NULL,
-  `prenom` varchar(100) NOT NULL,
-  `user` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `description` varchar(9999) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(100) COLLATE utf8_bin NOT NULL,
+  `prenom` varchar(100) COLLATE utf8_bin NOT NULL,
+  `user` varchar(100) COLLATE utf8_bin NOT NULL,
+  `password` varchar(100) COLLATE utf8_bin NOT NULL,
+  `description` varchar(999) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
 --
 -- Contenu de la table `chroniqueurs`
