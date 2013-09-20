@@ -2,9 +2,9 @@
 	<div class="container">
 		<div id="resaux-sociaux">
 			<p>Suivez-nous:</p>
-			<img src="../assets/img/facebook.png" alt="" />
-			<img src="../assets/img/twitter.png" alt="" />
-			<img src="../assets/img/pinterest.png" alt="" />
+			<img src="assets/img/ico/icon_facebook.png" alt="" />
+			<img src="assets/img/ico/icon_gplus.png" alt="" />
+			<img src="assets/img/ico/icon_twitter.png" alt="" />
 		</div>
 
 		<div id="footer-droite">
