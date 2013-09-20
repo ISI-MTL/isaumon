@@ -1,6 +1,6 @@
 <header>
 	<div class="container">
-		<img src="../assets/img/logo.png" alt="logo" />
+		<img src="assets/img/logo.png" alt="logo" />
 		<span>Recettes et informations</span>
 
 
