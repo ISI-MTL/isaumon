@@ -9,7 +9,7 @@
 			<li><a href="?page=recettes_saumon">Recettes</a></li>
 			<li><a href="?page=blog">Blog</a></li>
 			<li><a href="?page=apropos">À propos</a></li>
-			<li><a href="?page=contact">Contact</a></li>
+			<li><a href="?page=contact_poisson">Contact</a></li>
 		</ul>
 	</div>
 </header>

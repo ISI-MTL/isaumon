@@ -43,7 +43,10 @@ function insertPost($post)
 	return insertUpdateData( $db, $q );
 }
 
-/*// Fonction de suppression
+
+
+/*
+// Fonction de suppression
 function delete_usager($auteur){
 	global $bd;
 	global $table;
@@ -58,39 +61,6 @@ function delete_usager($auteur){
 	
 	// retourne le resultat bde l'operation (true ou false)
 	return ($pays);
-}*/
-
-// Fonction insert commentaires
-function insert_recettes($recette){
-	global $bd;
-	$table = 'recettes';
-	
-	// extraire des variables a partir des clé-valeur
-	// d'un tableau'
-	extract($recette);
-	
-	$req ="INSERT INTO $table(`titre`, `commentaire`, `ingredients`, `portion`, `tpspreparation`, 
-	`tpscuisson`, `mdcuisson`, `preparation`, `evaluation`, `date`, `img`) 
-	VALUES ('$titre', '$commentaire', '$ingredients', '$portion', '$tpspreparation', '$tpscuisson', '$mdcuisson', 
-	'$preparation', '$evaluation', '$date', '$img',)";
-	
-	$recette = insert_update_data($bd,$req);
-	
-	// retourne le resultat de la function (true ou false)
-	return ($recette);
-}
-
-// Fonction supprimer recette par id
-function delete_recette_by_id($id){
-	global $bd;
-	$table = 'recettes';	
-	
-	$req ="DELETE FROM $table WHERE id = '$id'";	
-	
-	$recette = insert_update_data($bd,$req);
-	
-	// retourne le resultat de la function (true ou false)
-	return ($recette);
 }
 
 function get_list_recette(){
@@ -119,7 +89,7 @@ function get_id_recette($titre,$commt,$ingrdt,$portion ){
 	        WHERE titre='$titre' and  commentaire='$commt' and ingredients='$ingrdt' and portion='$portion'";
 	$id_recette = readData($db, $q);
 	return $id_recette;
-}
+}*/
 
 
 ?>
