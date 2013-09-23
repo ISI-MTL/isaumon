@@ -9,37 +9,44 @@ $page = 1;
 if( isset($_GET['p']) )
 	$page = $_GET['p'];
 
-// articlesParPage se trouve dans le fichier de config config/blog.config.php.inc
-$articles = getArticlesFromPage($page, $articlesParPage);
+function afficherArticle($article)
+{
+	// si l'image n'existe pas, afficher une image par défaut
+	$image = "missing.jpg";
+	if( isset($article['img']) && file_exists("assets/img/blog/" . $article['img']) )
+		$image = $article['img'];
 
-// Affiche $articlesParPage posts en fonction de la $page courrante
-foreach($articles as $article)
-{ ?>
-
-	<article class="chronique">
-		<?php
-		// si l'image n'existe pas, afficher une image par défaut
-		$image = "missing.png";
-		if( isset($article['img']) && file_exists("assets/img/blog/" . $article['img']) )
-			$image = $article['img'];
-		?>
-		<img src="assets/img/blog/<?php echo $image; ?>" alt="" />
-		<div>
-			<h2><?php echo $article['titre']; ?></h2>
-			<p class="chroniqueur">Par <?php echo $article['auteur']; ?> à <?php echo date_format( date_create($article['date']), 'G:i, d-m-Y'); ?></p>
-			<p class="chronique-contenu">
-				<?php echo $article['contenu']; ?>
-			</p>
-			<a href="?page=blog&id=<?php echo $article['id'] ?>" class="lire-tout">LIRE LA SUITE</a>
-		</div>
-	</article>
-
-<?php
+	echo '<article class="chronique">';
+	echo '	<img src="assets/img/blog/'. $image .'" alt="" />';
+	echo '		<div>';
+	echo '			<h2>';
+	echo '				<a href="?page=blog&id='. $article['id'] .'">'. $article['titre'] .'</a>';
+	echo '			</h2>';
+	echo '			<p class="chroniqueur">Par '. $article['auteur'] .' à '. date_format( date_create($article['date']), 'G:i, d-m-Y') .'</p>';
+	echo '			<p class="chronique-contenu">'. $article['contenu'] .'</p>';
+	if( !isset($_GET['id']) )
+		echo '			<a href="?page=blog&id='. $article['id'] .'" class="lire-tout">LIRE LA SUITE</a>';
+	echo '		</div>';
+	echo '</article>';
 }
-
 // si c'est la liste des articles
 if( !isset($_GET['id']) )
 {
+	// articlesParPage se trouve dans le fichier de config config/blog.config.php.inc
+	$articles = getArticlesFromPage($page, $articlesParPage);
+
+	// Affiche $articlesParPage posts en fonction de la $page courrante
+	foreach($articles as $article)
+	{
+		afficherArticle($article);
+	}
+
+	// détermine le nombre de pages pour la pagination
+	$nbPages = 1;
+	$nbArticles = getNbArticles();
+	if( $nbArticles != -1 )
+		$nbPages = ceil( $nbArticles / $articlesParPage );
+
 	// Pagination 
 	echo '<nav>';
 	echo '<ul>';
@@ -59,14 +66,9 @@ if( !isset($_GET['id']) )
 }
 else // si c'est un article en particulier on affiche la section commentaires
 {
-	// Si $_SESSION['user'] est setté, afficher le formulaire pour ajotuer un comment
-	/*if( isset($_SESSION['user']) )
-	{
-		include("form_comments.php");
-	}*/
+	$article = getArticleById( $_GET['id'] );
 
-	// Afficher la liste des commentaires
-	//$comments = 
+	afficherArticle($article[0]);
 }
 
 ?>	

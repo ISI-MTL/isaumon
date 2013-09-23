@@ -7,7 +7,7 @@ function getNbArticles()
 {
 	global $db;
 
-	$q = "SELECT count(*) as 'nb' from commentaires WHERE commid IS NULL";
+	$q = "SELECT count(*) AS 'nb' FROM commentaires WHERE commid IS NULL";
 	$res = readData($db, $q);
 	return $res[0]['nb'];
 }
@@ -22,11 +22,11 @@ function getArticlesFromPage($pageNb, $articlessPerPage)
 	return readData($db, $q);
 }
 
-function getPostById($id)
+function getArticleById($id)
 {
 	global $db;
 
-	$q = "SELECT * from posts where id='$id'"; 
+	$q = "SELECT * FROM commentaires WHERE id = $id AND commid IS NULL"; 
 	return readData($db, $q);
 }
 

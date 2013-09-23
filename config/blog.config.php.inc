@@ -5,10 +5,4 @@ $description	= "Site informationnel sur les avantages et bénéfices de la conso
 
 // nombre d'articles à afficher par page
 $articlesParPage = 5;
-
-// détermine le nombre de pages pour la pagination
-$nbPages = 1;
-$nbArticles = getNbArticles();
-if( $nbArticles != -1 )
-	$nbPages = ceil( $nbArticles / $articlesParPage );
 ?>
