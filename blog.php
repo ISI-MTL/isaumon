@@ -5,7 +5,7 @@
 
 <?php
 // Affiche $postsDisplayed posts en fonction de la $page courrante
-foreach($posts as $post)
+foreach($articles as $post)
 { ?>
 
 	<article class="chronique">

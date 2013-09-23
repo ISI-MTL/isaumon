@@ -12,13 +12,13 @@ function getNumberOfPosts()
 	return $res;
 }
 
-function getPostsFromPage($pageNb, $postsPerPage)
+function getArticlesFromPage($pageNb, $articlessPerPage)
 {
 	global $db;
 
-	$start = ($pageNb-1) * $postsPerPage;
+	$start = ($pageNb-1) * $articlessPerPage;
 
-	$q = "SELECT * from posts ORDER BY posted DESC LIMIT $start, $postsPerPage";
+	$q = "SELECT * from posts ORDER BY posted DESC LIMIT $start, $articlessPerPage";
 	return readData($db, $q);
 }
 
