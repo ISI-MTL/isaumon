@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.3.7deb7
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
--- Serveur: localhost
--- Généré le : Ven 20 Septembre 2013 à 08:14
--- Version du serveur: 5.1.66
--- Version de PHP: 5.3.3-7+squeeze14
+-- Host: localhost
+-- Generation Time: Sep 23, 2013 at 02:46 PM
+-- Server version: 5.5.24-log
+-- PHP Version: 5.3.13
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -16,13 +17,15 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données: `isaumon`
+-- Database: `isaumon`
 --
+CREATE DATABASE IF NOT EXISTS `isaumon` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+USE `isaumon`;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `article_categorie`
+-- Table structure for table `article_categorie`
 --
 
 CREATE TABLE IF NOT EXISTS `article_categorie` (
@@ -32,15 +35,10 @@ CREATE TABLE IF NOT EXISTS `article_categorie` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
---
--- Contenu de la table `article_categorie`
---
-
-
 -- --------------------------------------------------------
 
 --
--- Structure de la table `categories`
+-- Table structure for table `categories`
 --
 
 CREATE TABLE IF NOT EXISTS `categories` (
@@ -51,15 +49,10 @@ CREATE TABLE IF NOT EXISTS `categories` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
---
--- Contenu de la table `categories`
---
-
-
 -- --------------------------------------------------------
 
 --
--- Structure de la table `chroniqueurs`
+-- Table structure for table `chroniqueurs`
 --
 
 CREATE TABLE IF NOT EXISTS `chroniqueurs` (
@@ -72,15 +65,10 @@ CREATE TABLE IF NOT EXISTS `chroniqueurs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
---
--- Contenu de la table `chroniqueurs`
---
-
-
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaires`
+-- Table structure for table `commentaires`
 --
 
 CREATE TABLE IF NOT EXISTS `commentaires` (
@@ -88,24 +76,26 @@ CREATE TABLE IF NOT EXISTS `commentaires` (
   `titre` varchar(100) COLLATE utf8_bin NOT NULL,
   `contenu` text COLLATE utf8_bin NOT NULL,
   `commid` int(10) DEFAULT NULL,
-  `date` date NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `auteur` varchar(50) COLLATE utf8_bin NOT NULL,
-  `img` blob,
+  `img` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `recette_id` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=4 ;
 
 --
--- Contenu de la table `commentaires`
+-- Dumping data for table `commentaires`
 --
 
 INSERT INTO `commentaires` (`id`, `titre`, `contenu`, `commid`, `date`, `auteur`, `img`, `recette_id`) VALUES
-(1, 'Saumon dans nos assiettes', 'Vous avez un faible pour le saumon? Le Guide alimentaire canadien recommande de consommer deux portions de poisson chaque semaine pour bénéficier de ses acides gras oméga-3. Essayez ces recettes saines et savoureuses à base de saumon qui vous plairont à coup sûr.', NULL, '2013-09-18', 'Admin', NULL, NULL);
+(1, 'Saumon dans nos assiettes', 'Vous avez un faible pour le saumon? Le Guide alimentaire canadien recommande de consommer deux portions de poisson chaque semaine pour bénéficier de ses acides gras oméga-3. Essayez ces recettes saines et savoureuses à base de saumon qui vous plairont à coup sûr.', NULL, '2013-09-18 04:00:00', 'Admin', NULL, NULL),
+(2, 'Tarataat', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', NULL, '2013-09-23 13:00:03', 'Mathieu', 'bouchees-saumon-roti_a_la_francaise.jpg', NULL),
+(3, 'akgbjdjkfs', 'sdkfsdjklfgksdjfgdjkfg\ndfjkgjkdfgkdfgjksdkfsdjklfgksdjfgdjkfgd\nfjkgjkdfgkdfgjksdkfsdjklfgksdjfgdjkfgdf\njkgjkdfgkdfgjksdkfsdjklfgksdjfgdjkfgdfj\nkgjkdfgkdfgjksdkfsdjklfgksdjfgdjkfgdf\njkgjkdfgkdfgjksdkfsdjklfgksdjfgdjkfgdfj\nkgjkdfgkdfgjk', NULL, '2013-09-23 13:13:11', 'math', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `faits`
+-- Table structure for table `faits`
 --
 
 CREATE TABLE IF NOT EXISTS `faits` (
@@ -117,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `faits` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
 
 --
--- Contenu de la table `faits`
+-- Dumping data for table `faits`
 --
 
 INSERT INTO `faits` (`id`, `titre`, `contenu`, `date`) VALUES
@@ -126,7 +116,7 @@ INSERT INTO `faits` (`id`, `titre`, `contenu`, `date`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `recettes`
+-- Table structure for table `recettes`
 --
 
 CREATE TABLE IF NOT EXISTS `recettes` (
@@ -146,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `recettes` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
 
 --
--- Contenu de la table `recettes`
+-- Dumping data for table `recettes`
 --
 
 INSERT INTO `recettes` (`id`, `titre`, `commentaire`, `ingredients`, `portion`, `tpspreparation`, `tpscuisson`, `mdcuisson`, `preparation`, `evaluation`, `date`, `img`) VALUES
@@ -155,7 +145,7 @@ INSERT INTO `recettes` (`id`, `titre`, `commentaire`, `ingredients`, `portion`, 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `recette_categorie`
+-- Table structure for table `recette_categorie`
 --
 
 CREATE TABLE IF NOT EXISTS `recette_categorie` (
@@ -165,7 +155,6 @@ CREATE TABLE IF NOT EXISTS `recette_categorie` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
---
--- Contenu de la table `recette_categorie`
---
-
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
