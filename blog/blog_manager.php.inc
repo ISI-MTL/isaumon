@@ -3,13 +3,13 @@ require_once("common/mysql.php.inc");
 
 $db = "isaumon";
 
-function getNumberOfPosts()
+function getNbArticles()
 {
 	global $db;
 
-	$q = "SELECT count(*) as 'nb' from recettes";
+	$q = "SELECT count(*) as 'nb' from commentaires WHERE commid IS NULL";
 	$res = readData($db, $q);
-	return $res;
+	return $res[0]['nb'];
 }
 
 function getArticlesFromPage($pageNb, $articlessPerPage)
@@ -18,7 +18,7 @@ function getArticlesFromPage($pageNb, $articlessPerPage)
 
 	$start = ($pageNb-1) * $articlessPerPage;
 
-	$q = "SELECT * from posts ORDER BY posted DESC LIMIT $start, $articlessPerPage";
+	$q = "SELECT * from commentaires WHERE commid IS NULL ORDER BY date DESC LIMIT $start, $articlessPerPage";
 	return readData($db, $q);
 }
 

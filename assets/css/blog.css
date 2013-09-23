@@ -77,9 +77,15 @@ nav li
 nav a 
 {
 	display: block;
-	padding: 10px 10px;
+	padding: 7px 15px;
 	text-decoration: none;
-	color: #d87d69;
 	font-family: "Lato";
 	font-size: 22px;
+	color: #d87d69;
+}
+
+nav li.active a
+{
+	background-color: #CA942F;
+	color: white;
 }
