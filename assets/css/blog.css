@@ -1,0 +1,85 @@
+article
+{
+	width: calc(100% - 20px);
+	float: left;
+	margin: 10px 10px;
+	padding-bottom: 18px;
+	border-bottom: 1px solid #72727a;
+	box-sizing: border-box;
+	display: none;
+}
+
+article > img
+{
+	float: left;
+	width: 30%;
+}
+
+article > div
+{
+	margin-left: 15px;
+	width: calc(70% - 15px);
+	float: left;
+}
+
+article h2
+{
+	font-family: "LatoBold";
+	color: #f29057;
+	font-size: 40px;
+	margin-bottom: 5px;
+}
+
+.chroniqueur
+{
+	font-family: "LatoBold";
+	color: #d87d69;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+
+.chronique-contenu
+{
+	font-family: "Source";
+	color: #4f5059;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.lire-tout
+{
+	color: #d97651;
+	font-family: "SourceBold";
+	text-decoration: none;
+}
+
+nav
+{
+	float: left;
+	width: 100%;
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+nav ul
+{
+	float: left;
+	list-style-type: none;
+	width: 100%;
+	text-align: center;
+}
+
+nav li 
+{
+	display: inline-block;
+}
+
+nav a 
+{
+	display: block;
+	padding: 10px 10px;
+	text-decoration: none;
+	color: #d87d69;
+	font-family: "Lato";
+	font-size: 22px;
+}

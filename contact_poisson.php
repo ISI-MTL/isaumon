@@ -1,1 +1,3 @@
-formulaire de contact
+<div class="container">
+	formulaire de contact
+</div>
