@@ -1,9 +1,12 @@
 <?php
 include("blog/blog_manager.php.inc");
 
-if( isset($_POST['']) )
+if( isset($_POST['form-auteur']) && isset($_POST['form-contenu']) && isset( $_GET['id']) )
 {
-
+	$commentaire['auteur'] = $_POST['form-auteur'];
+	$commentaire['contenu'] = $_POST['form-contenu'];
+	$commentaire['articleId'] = $_GET['id'];
+	$r = ajouterCommentaire($commentaire);
 }
 ?>
 
@@ -94,12 +97,10 @@ else // si c'est un article en particulier on affiche la section commentaires
 	<div id="section-commentaires">
 		<h3>Laisser un commentaire</h3>
 		<form action="#" method="POST">
-			<input id="auteur" name="auteur" type="text" placeholder="Nom"/>
-			<textarea rows="6" cols="50" placeholder="Votre commentaire"></textarea>
+			<input id="form-auteur" name="form-auteur" type="text" placeholder="Nom"/>
+			<textarea id="form-contenu" name="form-contenu" rows="6" cols="50" placeholder="Votre commentaire"></textarea>
 			<button type="submit">Envoyer</button>
 		</form>
- 
-		<h3>Ce que les autres en pense...</h3>
 
 		<?php
 		$commentaires = getCommentairesByArticleId( $_GET['id'] );

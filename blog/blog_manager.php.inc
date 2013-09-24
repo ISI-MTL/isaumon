@@ -39,67 +39,17 @@ function getCommentairesByArticleId($id)
 }
 
 
-
-function insertPost($post)
+function ajouterCommentaire($commentaire)
 {
 	global $db;
 	
 	// extraire des variables a partir des clé-valeur d'un array php
-	extract($post);
+	extract($commentaire);
 	
-	$q = "INSERT INTO posts (title, content, author, image) 
-		  VALUES ('$title', '$content', '$author', '$image')";
+	$q = "INSERT INTO commentaires (auteur, contenu, commid) 
+		  VALUES ('$auteur', '$contenu', '$articleId')";
 	
 	return insertUpdateData( $db, $q );
 }
-
-
-
-/*
-// Fonction de suppression
-function delete_usager($auteur){
-	global $bd;
-	global $table;
-	
-	// extraire des variables a partir des clé-valeur
-	// d'un tableau'
-	extract($auteur);
-	
-	$req ="DELETE FROM posts WHERE pseudo = '$pseudo' OR password = '$password'";
-	
-	$pays = insert_update_data($bd,$req);
-	
-	// retourne le resultat bde l'operation (true ou false)
-	return ($pays);
-}
-
-function get_list_recette(){
-	global $db ;
-	$table = 'recettes';
-	$req = "SELECT DISTINCT titre FROM $table";
-	$titre = readData($db, $q);
-	return $titre;
-}
-
-// function get recette by nom
-function get_recette_by_nom($nom){
-	global $db ;
-	$table = 'recettes';
-	$req = "SELECT * FROM $table WHERE titre='$nom'";
-	$recette = readData($db, $q);
-	return $recette;
-}
-
-// function get id recette
-function get_id_recette($titre,$commt,$ingrdt,$portion ){
-	global $db ;
-	$table = 'recettes';
-	
-	$req = "SELECT id FROM $table 
-	        WHERE titre='$titre' and  commentaire='$commt' and ingredients='$ingrdt' and portion='$portion'";
-	$id_recette = readData($db, $q);
-	return $id_recette;
-}*/
-
 
 ?>

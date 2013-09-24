@@ -74,7 +74,7 @@ function insertUpdateData($dbName, $query)
 	// close connection
 	mysql_close($connection);
 	
-	return $data;
+	return $results;
 }
 
 ?>
