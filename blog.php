@@ -1,12 +1,13 @@
 <?php include("blog/blog_manager.php.inc"); ?>
 
 <div class="container">
-	<h1>Nos chroniques</h1>
 
 <?php
-$page = 1;
+if( !isset($_GET['id']) )
+	echo '<h1>Nos chroniques</h1>';
 
 // determiner la page à afficher
+$page = 1;
 if( isset($_GET['p']) )
 	$page = $_GET['p'];
 
@@ -73,15 +74,40 @@ else // si c'est un article en particulier on affiche la section commentaires
 	afficherArticle($article[0]);
 	?>
 
-	<form>
-		<input type="text" />
-		<label></label><input type="text" />
-		<textarea></textarea>
-	</form>
+	<div id="section-commentaires">
+		<h3>Laisser un commentaire</h3>
+		<form action="#" method="POST">
+			<input id="nom" type="text" placeholder="Nom"/>
+			<textarea rows="6" cols="50" placeholder="Votre commentaire"></textarea>
+			<button type="submit">Envoyer</button>
+		</form>
+ 
+		<h3>Ce que les autres en penses...</h3>
+		<div class="commentaire">
+			<p class="commentaire-auteur">Posté par <span>Mathieu</span></p>
+			<p class="commentaire-date">23-12-1999</p>
+			<p class="commentaire-contenu">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</p>
+		</div>
+		<div class="commentaire">
+			<p class="commentaire-auteur">Posté par Mathieu</p>
+			<p class="commentaire-date">23-12-1999</p>
+			<p class="commentaire-contenu">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</p>
+		</div>
+	</div>
+
 
 	<?php
 }
 
 ?>	
-</div>
-
+</div><!-- Fin container -->
