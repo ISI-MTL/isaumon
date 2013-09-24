@@ -30,6 +30,16 @@ function getArticleById($id)
 	return readData($db, $q);
 }
 
+function getCommentairesByArticleId($id)
+{
+	global $db;
+
+	$q = "SELECT contenu, date, auteur FROM commentaires WHERE commid = $id"; 
+	return readData($db, $q);
+}
+
+
+
 function insertPost($post)
 {
 	global $db;

@@ -6,7 +6,6 @@ article
 	padding-bottom: 18px;
 	border-bottom: 1px solid #72727a;
 	box-sizing: border-box;
-	display: none;
 }
 
 article > img
@@ -26,6 +25,9 @@ article h2
 {
 	font-family: "LatoBold";
 	margin-bottom: 5px;
+	color: #f29057;
+	font-size: 40px;
+	text-decoration: none;
 }
 
 article h2 a 
@@ -96,4 +98,103 @@ nav li.active a
 {
 	background-color: #CA942F; /* changer moi */
 	color: white;
+}
+
+#section-commentaires 
+{
+	margin: auto;
+	width: calc(50% - 20px);
+	min-width: 400px;
+	font-family: "Source";
+}
+
+#section-commentaires h3
+{
+	margin-bottom: 10px;
+}
+
+#section-commentaires input[type=text]
+{
+	float: left;
+	clear: both;
+	box-sizing: border-box;
+	border: 3px solid #d97652;
+	border-radius: 5px;
+	padding: 5px;
+	width: 100%;
+}
+
+#section-commentaires input[type=text]:focus
+{
+	outline: none;
+}
+
+#section-commentaires textarea
+{
+	float: left;
+	clear: both;
+	width: 100%;
+	border: 3px solid #d97652;
+	box-sizing: border-box;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+#section-commentaires textarea:focus
+{
+	outline: none;
+}
+
+#section-commentaires button
+{
+	float: right;
+	padding: 5px 20px;
+	color: #d97652;
+	font-family: "SourceBold";
+	border: 0;
+	font-size: 16px;
+	background-color: transparent;
+}
+
+#section-commentaires h3
+{
+	color: #d97652;
+	float: left;
+	clear: both;
+}
+
+div.commentaire
+{
+	margin: 10px 0;
+	padding: 5px 0;
+	float: left;
+	width: 100%;
+	border-top: 2px solid #d97652;
+}
+
+div.commentaire:first-of-type
+{
+	margin-bottom: 0;
+}
+
+div.commentaire p.commentaire-auteur
+{
+	font-size: 14px;
+}
+
+div.commentaire p.commentaire-auteur span
+{
+	color: #d97652;
+	font-family: "SourceBold";
+}
+
+
+div.commentaire p.commentaire-date
+{
+	color: #9d9ea1;
+}
+
+div.commentaire p.commentaire-contenu
+{
+	font-size: 13px;
 }

@@ -1,0 +1,57 @@
+.container fieldset {
+   border:solid, 5px;
+}
+
+
+.container fieldset:not(:checked) > input {
+    position:absolute;
+    top:0px;
+
+    clip:rect(0,0,0,0);
+    
+}
+
+.container fieldset:not(:checked) > label {
+    float:right;
+    width:0.8em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:350%;
+    color:#FA5454;
+    text-shadow:1px 1px #FF8080, 2px 2px #FF6E6E, .1em .1em .2em rgba(107, 79, 79, 0.34);
+    padding:0 .07em;
+}
+
+.container fieldset:not(:checked) > label:before {
+    content: '♥  ';
+    padding: 0px;
+    margin: 0px;
+}
+
+.container fieldset > input:checked ~ label {
+    color: #FF000A;
+    text-shadow:1px 1px #C00, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+    
+}
+
+.container fieldset:not(:checked) > label:hover,
+.container fieldset:not(:checked) > label:hover ~ label {
+    color: red;
+    text-shadow:1px 1px rgb(241, 21, 21), 2px 2px #FF0000, .1em .1em .2em rgba(253, 0, 0, 0.4);
+}
+
+.container fieldset > input:checked + label:hover,
+.container fieldset > input:checked + label:hover ~ label,
+.container fieldset > input:checked ~ label:hover,
+.container fieldset > input:checked ~ label:hover ~ label,
+.container fieldset > label:hover ~ input:checked ~ label {
+    color: #E00;
+    text-shadow:1px 1px rgb(218, 32, 32), 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.container fieldset > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
