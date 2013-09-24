@@ -80,11 +80,12 @@ else // si c'est un article en particulier on affiche la section commentaires
 			<textarea rows="6" cols="50" placeholder="Votre commentaire"></textarea>
 			<button type="submit">Envoyer</button>
 		</form>
-
+ 
 		<h3>Ce que les autres en penses...</h3>
 		<div class="commentaire">
-			<p>Par Mathieu le 24-12-2013</p>
-			<p>
+			<p class="commentaire-auteur">Posté par Mathieu</p>
+			<p class="commentaire-date">23-12-1999</p>
+			<p class="commentaire-contenu">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

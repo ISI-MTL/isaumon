@@ -101,7 +101,7 @@ nav li.active a
 {
 	float: left;
 	margin: 0 10px;
-	width: calc(100% - 20px);
+	width: calc(80% - 20px);
 }
 
 #section-commentaires h3
