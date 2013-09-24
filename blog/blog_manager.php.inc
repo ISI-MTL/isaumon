@@ -34,7 +34,7 @@ function getCommentairesByArticleId($id)
 {
 	global $db;
 
-	$q = "SELECT contenu, date, auteur FROM commentaires WHERE commid = $id"; 
+	$q = "SELECT contenu, date, auteur FROM commentaires WHERE commid = $id ORDER BY date DESC"; 
 	return readData($db, $q);
 }
 
