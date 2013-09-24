@@ -6,6 +6,7 @@
 <?php
 $page = 1;
 
+// determiner la page à afficher
 if( isset($_GET['p']) )
 	$page = $_GET['p'];
 
@@ -16,6 +17,7 @@ function afficherArticle($article)
 	if( isset($article['img']) && file_exists("assets/img/blog/" . $article['img']) )
 		$image = $article['img'];
 
+	// html de l'article
 	echo '<article class="chronique">';
 	echo '	<img src="assets/img/blog/'. $image .'" alt="" />';
 	echo '		<div>';
@@ -29,6 +31,7 @@ function afficherArticle($article)
 	echo '		</div>';
 	echo '</article>';
 }
+
 // si c'est la liste des articles
 if( !isset($_GET['id']) )
 {
@@ -67,8 +70,16 @@ if( !isset($_GET['id']) )
 else // si c'est un article en particulier on affiche la section commentaires
 {
 	$article = getArticleById( $_GET['id'] );
-
 	afficherArticle($article[0]);
+	?>
+
+	<form>
+		<input type="text" />
+		<label></label><input type="text" />
+		<textarea></textarea>
+	</form>
+
+	<?php
 }
 
 ?>	
