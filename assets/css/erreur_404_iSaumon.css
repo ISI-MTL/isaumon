@@ -1,0 +1,22 @@
+body{
+		background:#ffffff;
+	}
+	#erreur{
+		margin-left: 275px;
+	}
+	#erreur p{
+		margin-left: 20px;
+		margin-bottom: 0;
+		
+		font-family:sans-serif;
+		font-weight: bold;
+		font-size: 22px; 
+	}
+	#erreur a{
+		margin-left: 185px;
+		
+		font-family:sans-serif;
+		font-weight: bold;
+		font-size: 22px;
+		text-decoration: none;
+	}
