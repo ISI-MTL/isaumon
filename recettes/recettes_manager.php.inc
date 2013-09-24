@@ -1,5 +1,5 @@
 <?php
-require_once("common/mysql.php.inc");
+require_once("../common/mysql.php.inc");
 
 $db = "isaumon";
 
@@ -62,19 +62,19 @@ function delete_usager($auteur){
 
 // Fonction insert commentaires
 function insert_recettes($recette){
-	global $bd;
+	global $db;
 	$table = 'recettes';
 	
 	// extraire des variables a partir des clé-valeur
 	// d'un tableau'
 	extract($recette);
 	
-	$req ="INSERT INTO $table(`titre`, `commentaire`, `ingredients`, `portion`, `tpspreparation`, 
-	`tpscuisson`, `mdcuisson`, `preparation`, `evaluation`, `date`, `img`) 
-	VALUES ('$titre', '$commentaire', '$ingredients', '$portion', '$tpspreparation', '$tpscuisson', '$mdcuisson', 
-	'$preparation', '$evaluation', '$date', '$img',)";
+	$q ="INSERT INTO $table(`titre`, `commentaire`, `ingredients`, `portion`, `tpspreparation`, `tpscuisson`, 
+	                        `mdcuisson`, `preparation`, `evaluation`, `img`)
+		 VALUES ('$titre', '$commentaire', '$ingredients', '$portion', '$tpspreparation', '$tpscuisson', 
+		         '$mdcuisson','$preparation', '$evaluation', '$img')"; 		
 	
-	$recette = insert_update_data($bd,$req);
+	$recette = insertUpdateData($db,$q);
 	
 	// retourne le resultat de la function (true ou false)
 	return ($recette);
@@ -82,12 +82,12 @@ function insert_recettes($recette){
 
 // Fonction supprimer recette par id
 function delete_recette_by_id($id){
-	global $bd;
+	global $db;
 	$table = 'recettes';	
 	
-	$req ="DELETE FROM $table WHERE id = '$id'";	
+	$q ="DELETE FROM $table WHERE id = '$id'";	
 	
-	$recette = insert_update_data($bd,$req);
+	$recette = insertUpdateData($bd,$q);
 	
 	// retourne le resultat de la function (true ou false)
 	return ($recette);
@@ -96,7 +96,7 @@ function delete_recette_by_id($id){
 function get_list_recette(){
 	global $db ;
 	$table = 'recettes';
-	$req = "SELECT DISTINCT titre FROM $table";
+	$q = "SELECT DISTINCT titre FROM $table";
 	$titre = readData($db, $q);
 	return $titre;
 }
@@ -105,7 +105,16 @@ function get_list_recette(){
 function get_recette_by_nom($nom){
 	global $db ;
 	$table = 'recettes';
-	$req = "SELECT * FROM $table WHERE titre='$nom'";
+	$q = "SELECT * FROM $table WHERE titre='$nom'";
+	$recette = readData($db, $q);
+	return $recette;
+}
+
+// function get recette by nom
+function get_all_recette(){
+	global $db ;
+	$table = 'recettes';
+	$q = "SELECT * FROM $table";
 	$recette = readData($db, $q);
 	return $recette;
 }
@@ -115,7 +124,7 @@ function get_id_recette($titre,$commt,$ingrdt,$portion ){
 	global $db ;
 	$table = 'recettes';
 	
-	$req = "SELECT id FROM $table 
+	$q = "SELECT id FROM $table 
 	        WHERE titre='$titre' and  commentaire='$commt' and ingredients='$ingrdt' and portion='$portion'";
 	$id_recette = readData($db, $q);
 	return $id_recette;
