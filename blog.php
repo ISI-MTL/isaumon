@@ -73,11 +73,26 @@ else // si c'est un article en particulier on affiche la section commentaires
 	afficherArticle($article[0]);
 	?>
 
-	<form>
-		<input type="text" />
-		<label></label><input type="text" />
-		<textarea></textarea>
-	</form>
+	<div id="section-commentaires">
+		<form action="#" method="POST">
+			<h3>Laisser un commentaire</h3>
+			<input id="nom" type="text" placeholder="Nom"/>
+			<textarea rows="6" cols="50" placeholder="Votre commentaire"></textarea>
+			<button type="submit">Envoyer</button>
+		</form>
+
+		<h3>Ce que les autres en penses...</h3>
+		<div class="commentaire">
+			<p>Par Mathieu le 24-12-2013</p>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</p>
+		</div>
+	</div>
+
 
 	<?php
 }

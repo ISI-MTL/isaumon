@@ -30,7 +30,10 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/base.css" />
 
 		<!-- Script de base -->
-		<script type="text/javascript" src="assets/js/base.js">Vous devez activer JavaScript</script>
+		<script type="text/javascript" src="assets/js/base.js">
+			<style type="text/css">#contenu{ display: block; }</style>
+			Vous devez activer JavaScript
+		</script>
 
 		<!-- CSS et JS spécifique à la page -->
 		<?php

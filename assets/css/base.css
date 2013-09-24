@@ -6,13 +6,6 @@
  *
  */
 
-html, body, p, h1, h2, h3, h4, h5, h6, img, ul, li 
-{
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-
 @font-face
 {
 	font-family: Lato;
@@ -47,6 +40,14 @@ html, body, p, h1, h2, h3, h4, h5, h6, img, ul, li
 {
 	font-family: SourceBold;
 	src: url("../police/source-sans-pro/SourceSansPro-Bold.otf");
+}
+
+html, body, p, h1, h2, h3, h4, h5, h6, img, ul, li 
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: "Lato";
 }
 
 .container
@@ -125,6 +126,7 @@ Contenu de la page
 	background-color: #ebeaf0;
 	width: 100%;
 	float: left;
+	display: none;
 }
 
 #contenu h1
