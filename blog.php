@@ -1,10 +1,26 @@
-<?php include("blog/blog_manager.php.inc"); ?>
+<?php
+include("blog/blog_manager.php.inc");
+
+if( isset($_POST['form-auteur']) && isset($_POST['form-contenu']) && isset( $_GET['id']) )
+{
+	$commentaire['auteur'] = $_POST['form-auteur'];
+	$commentaire['contenu'] = $_POST['form-contenu'];
+	$commentaire['articleId'] = $_GET['id'];
+	$r = ajouterCommentaire($commentaire);
+}
+?>
+
+
 
 <div class="container">
 
 <?php
+// Le titre est différent sur la liste d'article que sur la description d'un article
 if( !isset($_GET['id']) )
 	echo '<h1>Nos chroniques</h1>';
+else
+	echo '<h1>Article</h1>';
+
 
 // determiner la page à afficher
 $page = 1;
@@ -20,10 +36,13 @@ function afficherArticle($article)
 
 	// html de l'article
 	echo '<article class="chronique">';
-	echo '	<img src="assets/img/blog/'. $image .'" alt="" />';
+	echo '		<img src="assets/img/blog/'. $image .'" alt="" />';
 	echo '		<div>';
 	echo '			<h2>';
-	echo '				<a href="?page=blog&id='. $article['id'] .'">'. $article['titre'] .'</a>';
+	if( !isset($_GET['id']) )
+		echo '<a href="?page=blog&id='. $article['id'] .'">'. $article['titre'] .'</a>';
+	else
+		echo $article['titre'];
 	echo '			</h2>';
 	echo '			<p class="chroniqueur">Par '. $article['auteur'] .' à '. date_format( date_create($article['date']), 'G:i, d-m-Y') .'</p>';
 	echo '			<p class="chronique-contenu">'. $article['contenu'] .'</p>';
@@ -72,37 +91,28 @@ else // si c'est un article en particulier on affiche la section commentaires
 {
 	$article = getArticleById( $_GET['id'] );
 	afficherArticle($article[0]);
+
 	?>
 
 	<div id="section-commentaires">
 		<h3>Laisser un commentaire</h3>
 		<form action="#" method="POST">
-			<input id="nom" type="text" placeholder="Nom"/>
-			<textarea rows="6" cols="50" placeholder="Votre commentaire"></textarea>
+			<input id="form-auteur" name="form-auteur" type="text" placeholder="Nom"/>
+			<textarea id="form-contenu" name="form-contenu" rows="6" cols="50" placeholder="Votre commentaire"></textarea>
 			<button type="submit">Envoyer</button>
 		</form>
- 
-		<h3>Ce que les autres en penses...</h3>
+
+		<?php
+		$commentaires = getCommentairesByArticleId( $_GET['id'] );
+
+		foreach($commentaires as $com)
+		{ ?>
 		<div class="commentaire">
-			<p class="commentaire-auteur">Posté par <span>Mathieu</span></p>
-			<p class="commentaire-date">23-12-1999</p>
-			<p class="commentaire-contenu">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.
-			</p>
+			<p class="commentaire-auteur">Posté par <span><?php echo $com['auteur']; ?></span></p>
+			<p class="commentaire-date"><?php echo date_format( date_create($com['date']), 'G:i, d-m-Y'); ?></p>
+			<p class="commentaire-contenu"><?php echo $com['contenu']; ?></p>
 		</div>
-		<div class="commentaire">
-			<p class="commentaire-auteur">Posté par Mathieu</p>
-			<p class="commentaire-date">23-12-1999</p>
-			<p class="commentaire-contenu">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.
-			</p>
-		</div>
+		<?php } ?>
 	</div>
 
 

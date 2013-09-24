@@ -165,11 +165,9 @@ footer > .container
 	float: left;
 }
 
-#resaux-sociaux img
+#resaux-sociaux p:first-of-type
 {
-	margin-top: 3px;
-	width: 35px;
-	height: 35px;
+	margin-bottom: 5px;
 }
 
 #footer-droite
