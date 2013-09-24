@@ -18,10 +18,11 @@
         	<input type="email" placeholder="Courriel" name="email" title="Veuillez introduire votre email/courriel s'il vous plaît" value="jf-doubois@courriel.com"/>
         </label>
 
-	<label>Commentaires</label>
+	<label>Commentaires
 		<textarea name= "ecrireCommentaires" id="commentaires"></textarea>
+	</label>
 
-	<label> Aimez-vous ce site?
+	<label>Aimez-vous ce site?
 		<fieldset > 
 		    <input type="radio" id="star5" name="rating[]" value="5" />
 		    <label for="star5" title="Extraordinaire!">5 stars</label>

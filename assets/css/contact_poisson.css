@@ -1,7 +1,18 @@
-.container fieldset {
-   border:solid, 5px;
+input{
+    width: 300px;
+   
 }
 
+
+/*mise en forme de Amiez-vous ce site*/
+.container label:last-of-type{
+    color: red;
+    
+}
+.container fieldset{
+width: 320px;
+border: none;
+}
 
 .container fieldset:not(:checked) > input {
     position:absolute;
@@ -13,18 +24,18 @@
 
 .container fieldset:not(:checked) > label {
     float:right;
-    width:0.8em;
+    width:1em;
     overflow:hidden;
     white-space:nowrap;
     cursor:pointer;
     font-size:350%;
-    color:#FA5454;
-    text-shadow:1px 1px #FF8080, 2px 2px #FF6E6E, .1em .1em .2em rgba(107, 79, 79, 0.34);
+    color:#FD6B6B;
+    text-shadow:1px 1px #501F1F, 2px 2px #FF6E6E, .1em .1em .2em rgba(107, 79, 79, 0.34);
     padding:0 .07em;
 }
 
 .container fieldset:not(:checked) > label:before {
-    content: '♥  ';
+    content: '♥   ';
     padding: 0px;
     margin: 0px;
 }
@@ -37,7 +48,7 @@
 
 .container fieldset:not(:checked) > label:hover,
 .container fieldset:not(:checked) > label:hover ~ label {
-    color: red;
+    color: rgb(255, 32, 32);
     text-shadow:1px 1px rgb(241, 21, 21), 2px 2px #FF0000, .1em .1em .2em rgba(253, 0, 0, 0.4);
 }
 
@@ -46,8 +57,8 @@
 .container fieldset > input:checked ~ label:hover,
 .container fieldset > input:checked ~ label:hover ~ label,
 .container fieldset > label:hover ~ input:checked ~ label {
-    color: #E00;
-    text-shadow:1px 1px rgb(218, 32, 32), 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+    color: #FF1515;
+    text-shadow:1px 1px rgb(109, 1, 1), 2px 2px #700B0B, .1em .1em .2em rgba(0,0,0,.5);
 }
 
 .container fieldset > label:active {
