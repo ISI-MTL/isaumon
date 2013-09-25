@@ -67,15 +67,15 @@ function insert_recettes($recette){
 	
 	// extraire des variables a partir des clé-valeur
 	// d'un tableau'
-	extract($recette);
+	extract($recette);	
 	
 	$q ="INSERT INTO $table(`titre`, `commentaire`, `ingredients`, `portion`, `tpspreparation`, `tpscuisson`, 
 	                        `mdcuisson`, `preparation`, `evaluation`, `img`)
 		 VALUES ('$titre', '$commentaire', '$ingredients', '$portion', '$tpspreparation', '$tpscuisson', 
 		         '$mdcuisson','$preparation', '$evaluation', '$img')"; 		
-	
+	//var_dump($q);
 	$recette = insertUpdateData($db,$q);
-	
+	//var_dump($recette);
 	// retourne le resultat de la function (true ou false)
 	return ($recette);
 }

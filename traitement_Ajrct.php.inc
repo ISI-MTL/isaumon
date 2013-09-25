@@ -3,7 +3,7 @@ session_start();
 require_once("recettes/recettes_manager.php.inc");
 
 $recette = array();
-
+// mettre les données en session
 if(isset($_POST['titre'])){
 	$_SESSION['titre'] = $_POST['titre'];
 }
@@ -36,7 +36,7 @@ if(isset($_POST['img'])){
 }
 
 
-
+// recupperation et insertion des données
 if(is_numeric($_POST['portion']) && is_numeric($_POST['tpspre']) 
    && is_numeric($_POST['tpscuis']) && is_numeric($_POST['evalue'])){
 	
@@ -48,12 +48,12 @@ if(is_numeric($_POST['portion']) && is_numeric($_POST['tpspre'])
    ){
    	$recette['titre'] = $_POST['titre'];
 	$recette['commentaire'] = $_POST['commt'];
-	$recette['ingredients']= $_POST['ingrd'];
+	$recette['ingredients']= addslashes($_POST['ingrd']) ;
 	$recette['portion'] = $_POST['portion']+0;
 	$recette['tpspreparation'] = $_POST['tpspre']+0;
 	$recette['tpscuisson'] = $_POST['tpscuis']+0;
 	$recette['mdcuisson'] = $_POST['mdcuis'];
-	$recette['preparation'] = $_POST['preparat'];
+	$recette['preparation'] = addslashes($_POST['preparat']);
 	/*$recette['date'] = $_POST['date'];*/
 	$recette['evaluation'] = $_POST['evalue']+0;
 	$recette['img'] = $_POST['img'];	
@@ -66,6 +66,7 @@ if(is_numeric($_POST['portion']) && is_numeric($_POST['tpspre'])
 	else{
 		$insert = FALSE;
 	}
+	//var_dump($insert);
 	if($insert == TRUE){		
 	?>
 		<form action="ajouter_recette.php">
