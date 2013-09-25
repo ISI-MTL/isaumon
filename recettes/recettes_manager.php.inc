@@ -1,5 +1,5 @@
 <?php
-require_once("../common/mysql.php.inc");
+require_once("common/mysql.php.inc");
 
 $db = "isaumon";
 
