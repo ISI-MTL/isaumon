@@ -7,12 +7,12 @@ $(document).ready( function()
 	} );
 
 	$(".recette_image").click(function(){
-		$("#light").css({ display: "block" });
+		$(this).siblings(".white_content").css({ display: "block" });
 		$("#fadeblack").css({ display: "block" });
 	});
 
 	$(".white_content").click(function(){
-		$("#light").css({ display: "none" });
+		$(this).css({ display: "none" });
 		$("#fadeblack").css({ display: "none" });
 	});
 });
