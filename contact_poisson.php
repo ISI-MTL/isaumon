@@ -1,11 +1,13 @@
 
 <div class="container">
 	<h1>Gardez Contact</h1>
-
+	<img id="timbres" src="assets\img\timbres\timbres-poisson.png">
 	<h2>Réagissez à notre blog ou faites-nous parvenir vos commentaires, votre avis est important</h2>
+
 
 	
 	<div class= "ensemble">
+
 		<div class= "champsText">
 			<h3>Vos coordonés</h3>
 			<label >Prénom : </label>
