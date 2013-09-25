@@ -1,27 +1,77 @@
+.container h2{
+    text-align: center;
+    margin-right: 100px;
+    margin-left: 100px;
+    color: #D97652;
+    margin: 50px;
+}
+
+
+
+fieldset {
+padding: 0;
+margin: 0;
+width: 350px;
+}
+
+.container h3{
+    color: #4f5059;
+    margin-bottom: 40px;
+    margin-left: 10%;
+}
+
+
+.ensemble{
+    width: 90%;
+    margin-left: auto;
+}
+
+.champsText{
+    width: 500px;
+    border-radius:5px;
+    float: left;
+}
 
 
 input{
-    width: 300px;
+    width: 80%;
     height: 2em;
-    margin: auto;
+    text-align: center;
+    font-size: 1.2em;
+    border: solid;
+    border-color: #D97652;
+    border-radius:5px;
+    margin-left: 10%;
+    
+}
+
+.champsText textarea{
+    width: 350px;
+    height: 150px;
+    border: solid;
+    border-radius: 5px;
+    border-color: #D97652;
+    margin-left: 10%;
 }
 
 
 /*mise en forme de Amiez-vous ce site*/
-.container label{
+.champsText>label{
     color: #D97652;
     font-size: 1.5em; 
-     
+    margin-left: 50px;
+
+
 }
 
 
-.container fieldset{
-width: 520px;
+.champsText fieldset{
+
 border: none;
 height: 2em;
 }
 
-.container fieldset:not(:checked) > input {
+.champsText fieldset:not(:checked) > input {
     position:absolute;
     top:0px;
 
@@ -29,7 +79,7 @@ height: 2em;
     
 }
 
-.container fieldset:not(:checked) > label {
+.champsText fieldset:not(:checked) > label {
     float:right;
     width:1em;
     overflow:hidden;
@@ -38,37 +88,37 @@ height: 2em;
     font-size:350%;
     color:#FD6B6B;
     text-shadow:1px 1px #501F1F, 2px 2px #FF6E6E, .1em .1em .2em rgba(107, 79, 79, 0.34);
-    padding:0 .07em;
+    padding:0.07em;
 }
 
-.container fieldset:not(:checked) > label:before {
+.champsText fieldset:not(:checked) > label:before {
     content: '♥   ';
     padding: 0px;
     margin: 0px;
 }
 
-.container fieldset > input:checked ~ label {
+.champsText fieldset > input:checked ~ label {
     color: #FF000A;
     text-shadow:1px 1px #C00, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
     
 }
 
-.container fieldset:not(:checked) > label:hover,
-.container fieldset:not(:checked) > label:hover ~ label {
+.champsText fieldset:not(:checked) > label:hover,
+.champsText fieldset:not(:checked) > label:hover ~ label {
     color: rgb(255, 32, 32);
     text-shadow:1px 1px rgb(241, 21, 21), 2px 2px #FF0000, .1em .1em .2em rgba(253, 0, 0, 0.4);
 }
 
-.container fieldset > input:checked + label:hover,
-.container fieldset > input:checked + label:hover ~ label,
-.container fieldset > input:checked ~ label:hover,
-.container fieldset > input:checked ~ label:hover ~ label,
-.container fieldset > label:hover ~ input:checked ~ label {
+.champsText fieldset > input:checked + label:hover,
+.champsText fieldset > input:checked + label:hover ~ label,
+.champsText fieldset > input:checked ~ label:hover,
+.champsText fieldset > input:checked ~ label:hover ~ label,
+.champsText fieldset > label:hover ~ input:checked ~ label {
     color: #FF1515;
     text-shadow:1px 1px rgb(109, 1, 1), 2px 2px #700B0B, .1em .1em .2em rgba(0,0,0,.5);
 }
 
-.container fieldset > label:active {
+.champsText fieldset > label:active {
     position:relative;
     top:2px;
     left:2px;
