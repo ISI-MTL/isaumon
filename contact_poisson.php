@@ -2,7 +2,7 @@
 <div class="container">
 	<h1>Gardez Contact</h1>
 	<img id="timbres" src="assets\img\timbres\timbres-poisson.png">
-	<h2>Réagissez à notre blog ou faites-nous parvenir vos commentaires, votre avis est important</h2>
+	<h2>Réagissez à notre blog ou faites-nous parvenir vos commentaires,<br>votre avis est important</h2>
 
 
 	
@@ -10,21 +10,21 @@
 
 		<div class= "champsText">
 			<h3>Vos coordonés</h3>
-			<label >Prénom : </label>
+			<label> Prénom : </label>
 				<input  type="text" placeholder="p.ex. Jean-François"  name="prenom" pattern="^[a-zA-Z][a-zA-Z-_\.\s]{1,20}$" title="Veuillez introduire votre prénom s'il vous plaît" required="required" value=""/>
 	    	
 	    	<br>
 	    	<br>
 	    	<br>
 	        
-	        <label>Nom de famille : </label>
+	        <label> Nom de famille : </label>
 	    		<input type="text" placeholder="p.ex. Doubois" name="nom" pattern="^[a-zA-Z\][a-zA-Z0-9-_\.\s]{1,20}$" title="Veuillez introduire votre nom de famille s'il vous plaît" value=""/>
 	    	
 	    	<br>
 	    	<br>
 	    	<br>
 	        
-	        <label>Email / courriel : </label>
+	        <label> Email / courriel : </label>
 	        	<input type="email" placeholder="p.ex. jf-doubois@courriel.com" name="email" title="Veuillez introduire votre email/courriel s'il vous plaît" value=""/>
 	        
 	    </div>
@@ -33,7 +33,7 @@
 	      
 	    <div class= "champsText">
 		    <h3>Votre avis : </h3>
-			<label>Commentaires : </label>
+			<label> Commentaires : </label>
 				<br>
 				<textarea name= "ecrireCommentaires" id="commentaires"></textarea>
 			
@@ -41,7 +41,7 @@
 			<br>
 			
 
-			<label>Aimez-vous iSaumon?</label>
+			<label> Aimez-vous iSaumon? </label>
 				<fieldset > 
 				    <input type="radio" id="star5" name="rating[]" value="5" />
 				    <label for="star5" title="Extraordinaire!"></label>
