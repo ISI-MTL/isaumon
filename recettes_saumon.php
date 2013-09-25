@@ -9,17 +9,12 @@
 <div class="container">
 	<h1>Nos recettes rapide et facile!</h1>
 	<h2><cite>"Cuisiner suppose une tête légère, un esprit généreux et un coeur large".</cite>par Paul Gauguin</h2>
-	<p></p>
 	<ul class="grid effect-7" id="grid">
 				<?php foreach( $table_recettes as $recette){ ?>
 				<li><img class="recette_image" src="assets/img/recettes/<?php echo($recette["img"]);?>">
 				<h2><?php echo($recette["titre"]);?></h2>
 				<p><?php echo($recette["commentaire"]);?></p>
-				
-				<div id="light" class="white_content">
-				<img class="recette_image" src="assets/img/recettes/<?php echo($recette["img"]);?>">
-				This is the lightbox content. 
-				</div>
+				<a href="">En savoir plus</a>
 				</li>
 				<?php } ?>
 				<li><a href="http://drbl.in/fWMM"><img src="assets/img/recettes/1.jpg"></a></li>
@@ -32,9 +27,6 @@
 				<li><a href="http://drbl.in/fWMM"><img src="assets/img/recettes/1.jpg"></a></li>
 				<li><a href="http://drbl.in/fWPV"><img src="assets/img/recettes/3.jpg"></a></li>
 				<li><a href="http://drbl.in/fWMT"><img src="assets/img/recettes/4.jpg"></a></li>
-				
-
-				<div id="fadeblack" class="black_overlay"></div>
 	</ul>
 </div>
 
