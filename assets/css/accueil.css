@@ -6,8 +6,7 @@
  #banniere
  {
  	width: 100%;
- 	/*max-width: 1024px;
-	border-bottom: 10px solid #4f5059;*/
+
  }
  
  
@@ -30,29 +29,6 @@
 
 
 
-/*#contenu h1
-{
-	font-family: LatoBlack;
-	font-size: 35px;
-	color: #4f5059;
-	padding-left: 5px;
-	padding-bottom: 5px;
-	margin-bottom: 15px;
-	
-	margin-left: 3%;
-	width: 66%;
-	margin-top: 3%;
-	/*border-bottom: 2px solid #72727a;*/
-	/*width: 93%;
-}
-hr{
-	height: 2px;
-	width:66%;
-	margin-right: 31%;
-	
-} */
-
-
 section{
 	width: 97%;
 	float: left;
@@ -64,14 +40,13 @@ section p{
 	font-family: Source;
 }
 
-section #text{
+section #text {
 	float: left;
-	width: 68%;
+	width: 67%;
 	font-size: 22px;
 	background-color: #f3f3f3;
-	padding: 13px;
-	/*height: 501px;*/
-	padding-bottom: 45px;
+	padding: 14px;
+	padding-bottom: 50px;
 }
 #text img{
 	float: left;
@@ -81,15 +56,13 @@ section #text{
 	box-shadow: 1px 1px 1px;
 }
 
-section aside{
-	width:22%;
+section aside {
+	width: 22%;
 	float: right;
 	margin-right: 3%;
-	/*margin-top: -1%;*/
-	padding: 10px;
-	background-color:#f3f3f3;
-	/*height: 507px;*/
-	
+	padding: 15px;
+	background-color: #f3f3f3;
+	font-size: 1.1em;
 }
 #saumon{
 	width: 96%;
@@ -111,22 +84,21 @@ article aside{
 	background-color: #f3f3f3;
 	height: 325px;
 }
-article #mon_article{
+article #mon_article {
 	width: 20%;
 	float: left;
 	padding: 10px;
 	background-color: #f3f3f3;
 	height: 322px;
 	margin-left: 3%;
-
 }
-article #mon_article2{
-	width: 22%;
+article #mon_article2 {
+	width: 24%;
 	float: right;
 	padding: 10px;
 	background-color: #f3f3f3;
 	height: 322px;
-	margin-right: 3%;
+	margin-right: -2%;
 }
 
 
@@ -143,20 +115,45 @@ article #mon_article2 p{
 	font-size: 1.2em;
 	
 }
+article h2:nth-of-type(1){
+	padding-left: 2%;
+	padding-bottom: 2px;
+	background-color: gray;
+	color: white;
+	border-top: 4px solid orange;
+	border-left: 4px solid orange;
+	margin-bottom: 2%;
+	width: 100%;
+}
+#text h3{
+	padding-left: 2%;
+	padding-bottom: 2px;
+	background-color: gray;
+	color: white;
+	border-top: 4px solid orange;
+	border-left: 4px solid orange;
+	margin-bottom: 2%;
+	
+}
 #mon_article p{
 	margin-top: 8%;
 }
-#recettes{
-	width: 46%;
-	float: left;
-	background-color: #f3f3f3;
-	height: 345px;
+#recettes {
+width: 46%;
+float: left;
+background-color: #f3f3f3;
+height: 345px;
+padding-left: 2%;
 }
 #recettes h3{
 	margin-bottom: 2%;
+	padding-left: 2%;
 }
 #recettes img{
 	width:100%;
+}
+#recettes p{
+	padding-left: 2%;
 }
 
 aside p{
@@ -175,16 +172,9 @@ aside h2{
 	
 	
 }
-/*article{
-	width: 100%;
-	float: left;
-	margin-left: 2%;
-	height: 315px;
-	padding-bottom: 25px;
-	
-}*/
+
 article {
-width: 97%;
+width: 92%;
 float: left;
 padding-left: 3%;
 text-align: justify;

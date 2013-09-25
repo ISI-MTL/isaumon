@@ -2,10 +2,10 @@
 -- version 4.0.4
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Sep 24, 2013 at 04:24 PM
--- Server version: 5.5.24-log
--- PHP Version: 5.3.13
+-- Client: localhost
+-- Généré le: Mer 25 Septembre 2013 à 15:44
+-- Version du serveur: 5.5.24-log
+-- Version de PHP: 5.3.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `isaumon`
+-- Base de données: `isaumon`
 --
 CREATE DATABASE IF NOT EXISTS `isaumon` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
 USE `isaumon`;
@@ -25,7 +25,7 @@ USE `isaumon`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `article_categorie`
+-- Structure de la table `article_categorie`
 --
 
 CREATE TABLE IF NOT EXISTS `article_categorie` (
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `article_categorie` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categories`
+-- Structure de la table `categories`
 --
 
 CREATE TABLE IF NOT EXISTS `categories` (
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chroniqueurs`
+-- Structure de la table `chroniqueurs`
 --
 
 CREATE TABLE IF NOT EXISTS `chroniqueurs` (
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `chroniqueurs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `commentaires`
+-- Structure de la table `commentaires`
 --
 
 CREATE TABLE IF NOT EXISTS `commentaires` (
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `commentaires` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=6 ;
 
 --
--- Dumping data for table `commentaires`
+-- Contenu de la table `commentaires`
 --
 
 INSERT INTO `commentaires` (`id`, `titre`, `contenu`, `commid`, `date`, `auteur`, `img`, `recette_id`) VALUES
@@ -97,7 +97,7 @@ INSERT INTO `commentaires` (`id`, `titre`, `contenu`, `commid`, `date`, `auteur`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `faits`
+-- Structure de la table `faits`
 --
 
 CREATE TABLE IF NOT EXISTS `faits` (
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `faits` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `faits`
+-- Contenu de la table `faits`
 --
 
 INSERT INTO `faits` (`id`, `titre`, `contenu`, `date`) VALUES
@@ -118,14 +118,14 @@ INSERT INTO `faits` (`id`, `titre`, `contenu`, `date`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `recettes`
+-- Structure de la table `recettes`
 --
 
 CREATE TABLE IF NOT EXISTS `recettes` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `titre` varchar(100) COLLATE utf8_bin NOT NULL,
   `commentaire` varchar(555) COLLATE utf8_bin NOT NULL,
-  `ingredients` varchar(555) COLLATE utf8_bin NOT NULL,
+  `ingredients` text COLLATE utf8_bin NOT NULL,
   `portion` int(4) NOT NULL,
   `tpspreparation` int(4) DEFAULT NULL COMMENT 'temps de preparation',
   `tpscuisson` int(4) DEFAULT NULL COMMENT 'temps de cuisson',
@@ -135,19 +135,21 @@ CREATE TABLE IF NOT EXISTS `recettes` (
   `date` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `img` varchar(100) COLLATE utf8_bin DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=20 ;
 
 --
--- Dumping data for table `recettes`
+-- Contenu de la table `recettes`
 --
 
 INSERT INTO `recettes` (`id`, `titre`, `commentaire`, `ingredients`, `portion`, `tpspreparation`, `tpscuisson`, `mdcuisson`, `preparation`, `evaluation`, `date`, `img`) VALUES
-(1, 'Mousse d''asperge au saumon fumé', 'Une verrine très fraîche au goût subtil d''asperge et de saumon fumé, un duo gagnant !', '300 g d''asperges blanches en conserve (garder 5 cl de jus pour la recette);\r\n2 oeufs durs;\r\n5 cuillères à soupe de crème allégée à 15 %;\r\n4 tranches de saumon fumé;\r\n3 feuilles de gélatine (3 g);', 4, NULL, 120, NULL, 'Faites tremper les feuilles de gélatine dans un bol d''eau froide.\r\nPortez à ébullition 5 cl du jus des asperges. Essorez la gélatine entre vos mains et faites-la dissoudre dans le jus chauffé, hors du feu. Laissez refroidir.\r\n\r\nMixez ensemble les asperges coupées en tronçons, les œufs écalés et coupés en morceaux, la crème fraîche et le jus d''asperge contenant la gélatine. Vous devez obtenir une crème bien lisse. Versez dans des mini verrines en les remplissant aux deux tiers. Placez au réfrigérateur au moins 3 heures.\r\n\r\nCoupez le saumon fumé en petits dés et répartissez-les sur la mousse d''asperge dans les verrines. Décorez avec un brin d''aneth ou autre aromatique à votre goût.\r\n\r\nServez frais en entrée ou lors de vos apéritifs dînatoires.', 9, '2013-09-16 04:00:00', '');
+(1, 'Mousse d''asperge au saumon fumé', 'Une verrine très fraîche au goût subtil d''asperge et de saumon fumé, un duo gagnant !', '300 g d''asperges blanches en conserve (garder 5 cl de jus pour la recette);\r\n2 oeufs durs;\r\n5 cuillères à soupe de crème allégée à 15 %;\r\n4 tranches de saumon fumé;\r\n3 feuilles de gélatine (3 g);', 4, NULL, 120, NULL, 'Faites tremper les feuilles de gélatine dans un bol d''eau froide.\r\nPortez à ébullition 5 cl du jus des asperges. Essorez la gélatine entre vos mains et faites-la dissoudre dans le jus chauffé, hors du feu. Laissez refroidir.\r\n\r\nMixez ensemble les asperges coupées en tronçons, les œufs écalés et coupés en morceaux, la crème fraîche et le jus d''asperge contenant la gélatine. Vous devez obtenir une crème bien lisse. Versez dans des mini verrines en les remplissant aux deux tiers. Placez au réfrigérateur au moins 3 heures.\r\n\r\nCoupez le saumon fumé en petits dés et répartissez-les sur la mousse d''asperge dans les verrines. Décorez avec un brin d''aneth ou autre aromatique à votre goût.\r\n\r\nServez frais en entrée ou lors de vos apéritifs dînatoires.', 9, '2013-09-16 04:00:00', ''),
+(18, 'Quiche Saumon-fromage de ch', 'Quiche Saumon-fromage de ch', '200 g de de saumon sans peau, 15 0 g de fromage de ch', 5, 15, 35, 'Four', '', 8, '2013-09-25 15:38:51', 'saumon_fromage.jpg'),
+(19, 'Bagles au saumon fum', 'Bagles au saumon fum', '15 tranches de saumon fum', 1, 5, 0, 'Four', 'Couper les bagels en deux et les faire toaster l', 8, '2013-09-25 15:41:52', 'Bagles_au_saumon.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `recette_categorie`
+-- Structure de la table `recette_categorie`
 --
 
 CREATE TABLE IF NOT EXISTS `recette_categorie` (
