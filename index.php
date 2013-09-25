@@ -36,18 +36,6 @@
 		<script type="text/javascript" src="assets/js/base.js">Vous devez activer JavaScript</script>
 
 		<!-- CSS et JS spécifique à la page -->
-		
-		<!-- Style de lazyloading -->
-		<link rel="stylesheet" type="text/css" href="assets/css/lazyloading/component.css" />
-		<link rel="stylesheet" type="text/css" href="assets/css/lazyloading/default.css" />
-		<!-- Script de lazyloading -->
-		<script type="text/javascript" src="assets/js/lazyloading/modernizr.custom.js"></script>
-		<script type="text/javascript" src="assets/js/lazyloading/masonry.pkgd.min.js"></script>
-		<script type="text/javascript" src="assets/js/lazyloading/imagesloaded.js"></script>
-		<script type="text/javascript" src="assets/js/lazyloading/classie.js"></script>
-		<script type="text/javascript" src="assets/js/lazyloading/AnimOnScroll.js"></script>
-
-
 
 		<!-- Script de base -->
 		<script type="text/javascript" src="assets/js/base.js">
