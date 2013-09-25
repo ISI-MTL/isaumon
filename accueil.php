@@ -32,8 +32,10 @@
 			<div id="recettes">
 				
 				<img src="assets/img/filets-de-saumon2.jpg" id="recette" alt="" />
-				<h3>Saumon au four</h3>
-				<p>Ainsi, quand votre enfant vous demande la définition des oméga-3
+				<h3>Quiche Saumon-fromage de chèvre</h3>
+				<p>Étaler la pâte brisée dans un moule à tarte et la piquer à la fourchette.
+				Faire couper le saumon en cubes et les répartir sur la pâte.
+				Battre les œufs, puis mélanger avec la crème fraîche.
 				</p>
 			</div>
 			<div id="mon_article">

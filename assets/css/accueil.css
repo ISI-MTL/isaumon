@@ -140,7 +140,7 @@ article #mon_article2 p{
 	color: white;
 	border-top: 4px solid orange;
 	border-left: 4px solid orange;
-	font-size: 1.4em;
+	font-size: 1.2em;
 	
 }
 #mon_article p{
@@ -151,6 +151,9 @@ article #mon_article2 p{
 	float: left;
 	background-color: #f3f3f3;
 	height: 345px;
+}
+#recettes h3{
+	margin-bottom: 2%;
 }
 #recettes img{
 	width:100%;
