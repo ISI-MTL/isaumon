@@ -6,7 +6,7 @@
 
 
 	
-	<div class= "ensemble">
+	<form class= "ensemble">
 
 		<div class= "champsText">
 			<h3>Vos coordonés</h3>
@@ -41,18 +41,18 @@
 			<br>
 			
 
-			<label>Aimez-vous ce site?</label>
+			<label>Aimez-vous iSaumon?</label>
 				<fieldset > 
 				    <input type="radio" id="star5" name="rating[]" value="5" />
-				    <label for="star5" title="Extraordinaire!">5 stars</label>
+				    <label for="star5" title="Extraordinaire!"></label>
 				    
-				    <input type="radio" id="star4" name="rating[]" value="4" /><label for="star4" title="J'aime">4 stars</label>
-				    <input type="radio" id="star3" name="rating[]" value="3" /><label for="star3" title="OK">3 stars</label>
-				    <input type="radio" id="star2" name="rating[]" value="2" /><label for="star2" title="Je n'aime pas">2 stars</label>
-				    <input type="radio" id="star1" name="rating[]" value="1" /><label for="star1" title="Je n'aime pas du tout">1 star</label>
+				    <input type="radio" id="star4" name="rating[]" value="4" /><label for="star4" title="J'aime"></label>
+				    <input type="radio" id="star3" name="rating[]" value="3" /><label for="star3" title="OK"></label>
+				    <input type="radio" id="star2" name="rating[]" value="2" /><label for="star2" title="Je n'aime pas"></label>
+				    <input type="radio" id="star1" name="rating[]" value="1" /><label for="star1" title="Je n'aime pas du tout"></label>
 				</fieldset>
 		</div>
-	</div>
-
-
+		<button>Envoyer</button>
+	</form>
+	
 </div>

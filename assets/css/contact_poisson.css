@@ -1,3 +1,16 @@
+.container .champsText{
+    padding-bottom: 5em;
+}
+
+button{
+    width: 20%;
+    background-color: #D97652;
+    margin-left: 40%;
+    margin-bottom: 2em;
+    font-size: 3vw;
+    color: #3F454E;
+    border-radius: 15px;
+}
 .container h2{
     text-align: center;
     color: #6b7381;
@@ -27,10 +40,9 @@ width: 80%;
 
 }
 
-
 .ensemble{
- 
-    margin-left: auto;
+     margin-left: auto;
+
 }
 
 .champsText{
@@ -67,10 +79,7 @@ input{
     color: #D97652;
     font-size: 2vw; 
     margin-left: 50px;
-
-
 }
-
 
 .champsText fieldset{
 
@@ -81,8 +90,7 @@ height: 2em;
 .champsText fieldset:not(:checked) > input {
     position:absolute;
     top:0px;
-    clip:rect(0,0,0,0);
-    
+    clip:rect(0,0,0,0);   
 }
 
 .champsText fieldset:not(:checked) > label {
@@ -94,14 +102,12 @@ height: 2em;
     font-size: 5vw;
     color:#FD6B6B;
     text-shadow:1px 1px #501F1F, 2px 2px #FF6E6E, .1em .1em .2em rgba(107, 79, 79, 0.34);
-    padding:0.07em;
 }
 
 .champsText fieldset:not(:checked) > label:before {
-    content: '♥   ';
-    font-size: 110%;
+    content: '♥';
     padding: 0px;
-    margin: 0px;
+    margin: 1px;
 }
 
 .champsText fieldset > input:checked ~ label {
