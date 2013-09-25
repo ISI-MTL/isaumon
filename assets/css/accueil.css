@@ -6,5 +6,199 @@
  #banniere
  {
  	width: 100%;
- 	'max-width: 1024px;
+ 	/*max-width: 1024px;
+	border-bottom: 10px solid #4f5059;*/
  }
+ 
+ 
+ /*ajouter par Diop index*/
+ 
+ 
+ .container
+{
+	float: left;
+	width: 80%;
+	margin-left: 10%;
+	background-color: white;
+}
+
+#contenu h1{
+	padding-left: 38px;
+	margin:0;
+}
+
+
+
+
+/*#contenu h1
+{
+	font-family: LatoBlack;
+	font-size: 35px;
+	color: #4f5059;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+	
+	margin-left: 3%;
+	width: 66%;
+	margin-top: 3%;
+	/*border-bottom: 2px solid #72727a;*/
+	/*width: 93%;
+}
+hr{
+	height: 2px;
+	width:66%;
+	margin-right: 31%;
+	
+} */
+
+
+section{
+	width: 97%;
+	float: left;
+	padding-left: 3%;
+	text-align: justify;
+	margin-bottom: 3%;
+}
+section p{
+	font-family: Source;
+}
+
+section #text{
+	float: left;
+	width: 68%;
+	font-size: 22px;
+	background-color: #f3f3f3;
+	padding: 13px;
+	/*height: 501px;*/
+	padding-bottom: 45px;
+}
+#text img{
+	float: left;
+	width: 29%;
+	margin-right: 18px;
+	margin-top: 6px;
+	box-shadow: 1px 1px 1px;
+}
+
+section aside{
+	width:22%;
+	float: right;
+	margin-right: 3%;
+	/*margin-top: -1%;*/
+	padding: 10px;
+	background-color:#f3f3f3;
+	/*height: 507px;*/
+	
+}
+#saumon{
+	width: 96%;
+	margin-top: 9px;
+	border: 4px solid gray;
+}
+#omega{
+	width: 102%;
+	margin-top: 10px;
+	border: 4px solid gray;
+}
+
+article aside{
+	width: 22%;
+	float: right;
+	margin-right: 3%;
+	margin-top: 3%;
+	padding: 10px;
+	background-color: #f3f3f3;
+	height: 325px;
+}
+article #mon_article{
+	width: 20%;
+	float: left;
+	padding: 10px;
+	background-color: #f3f3f3;
+	height: 322px;
+	margin-left: 3%;
+
+}
+article #mon_article2{
+	width: 22%;
+	float: right;
+	padding: 10px;
+	background-color: #f3f3f3;
+	height: 322px;
+	margin-right: 3%;
+}
+
+
+article #mon_article2 p{
+	padding-top: 6%;
+	padding-left: 3px;
+}
+#mon_article h2,#mon_article2 h2{
+	background-color: gray;
+	padding:2px;
+	color: white;
+	border-top: 4px solid orange;
+	border-left: 4px solid orange;
+	font-size: 1.2em;
+	
+}
+#mon_article p{
+	margin-top: 8%;
+}
+#recettes{
+	width: 46%;
+	float: left;
+	background-color: #f3f3f3;
+	height: 345px;
+}
+#recettes h3{
+	margin-bottom: 2%;
+}
+#recettes img{
+	width:100%;
+}
+
+aside p{
+	margin-top: 8%;
+	font-family: Source;
+	padding: 8px;
+	
+}
+aside h2{
+	background-color: gray;
+	padding:2px;
+	color: white;
+	border-top: 4px solid orange;
+	border-left: 4px solid orange;
+	font-size: 1.4em;
+	
+	
+}
+/*article{
+	width: 100%;
+	float: left;
+	margin-left: 2%;
+	height: 315px;
+	padding-bottom: 25px;
+	
+}*/
+article {
+width: 97%;
+float: left;
+padding-left: 3%;
+text-align: justify;
+margin-bottom: 3%;
+}
+
+
+article img{
+	width:100%;
+}
+article p{
+	width: 93%;
+	height: 90px;
+	text-align: justify;
+	font-family: Source;
+	/*background-color: white;*/
+}

@@ -1,14 +1,18 @@
-<div class="container">
-	<h1>Yay recettes!</h1>
-	<?php/*
-	$recettes = getPostsFromPage(1, 5);
+	<?php
+	require_once("/recettes/recettes_manager.php.inc");
+	$table_recettes=get_all_recette();
+	?>
+	<div class="container">
+		<h1>Nos recettes rapide et facile!</h1>
+		<h2><cite>"Cuisiner suppose une tête légère, un esprit généreux et un coeur large".</cite>par Paul Gauguin</h2>
+		<ul class="grid effect-7" id="grid">
+			<?php foreach( $table_recettes as $recette){ ?>
+			<li><img class="recette_image" src="assets/img/recettes/<?php echo($recette["img"]);?>">
+			<h2><?php echo($recette["titre"]);?></h2>
+			<p><?php echo($recette["commentaire"]);?></p>
+			<a href="">En savoir plus</a>
+			</li>
+			<?php } ?>
+		</ul>
+	</div>
 
-	foreach($recettes as $recette)
-	{ */?>
-		<article class="recette">
-			<img src="assets/img/bouchees-saumon-roti_a_la_francaise.jpg" alt="omnomnom" />
-			<h2><?php //echo $recette['title']; ?></h2>
-			<p><?php //echo $recette['content']; ?></p>
-		</article>
-	<?php //} ?>
-</div>
