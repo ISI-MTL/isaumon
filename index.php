@@ -32,16 +32,16 @@
 		<!--[if IE 7]>
     		<link rel="stylesheet" href="assets/police/fontello/fontello-ie7.css">
     	<![endif]-->
-    	<!-- Script de base -->
-		<script type="text/javascript" src="assets/js/base.js">Vous devez activer JavaScript</script>
-
-		<!-- CSS et JS spécifique à la page -->
 
 		<!-- Script de base -->
-		<script type="text/javascript" src="assets/js/base.js">
-			<style type="text/css">#contenu{ display: block; }</style>
-			Vous devez activer JavaScript
-		</script>
+		<script type="text/javascript" src="assets/js/base.js">Vous devez activer JavaScript</script>
+		
+		<!-- Script nivo slider page accueil -->
+		<script type="text/javascript" src="assets/plugins/nivo-slider/jquery.nivo.slider.pack.js"></script>
+		
+		<!-- link nivo slider page accueil -->
+    	<link rel="stylesheet" type="text/css" href="assets/plugins/nivo-slider/nivo-slider.css" />
+    	<link rel="stylesheet" type="text/css" href="assets/plugins/nivo-slider/themes/default/default.css" />
 
 		<!-- CSS et JS spécifique à la page -->
 		<?php
@@ -77,7 +77,7 @@
 				{
 					// le fichier n'existe pas
 					// inclus la page d'accueil
-					include("erreur_404_iSaumon.php");
+					include("accueil.php");
 				}
 			}
 			else

@@ -58,9 +58,20 @@ article h2 a
 	color: #d97651;
 	font-family: "SourceBold";
 	text-decoration: none;
-	background-color: #E0BB83; /* changer moi */
+	background-color: #ebebf2; /* changer moi */
 	padding: 5px 10px;
 	border-radius: 5px;
+
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-o-transition:all 0.5s;
+	transition:all 0.5s;
+}
+
+.lire-tout:hover
+{
+	color: #ebebf2;
+	background-color: #f29057;
 }
 
 nav
@@ -96,8 +107,8 @@ nav a
 
 nav li.active a
 {
-	background-color: #CA942F; /* changer moi */
-	color: white;
+	background-color: #d97651; /* changer moi */
+	color: #ebebf2;
 }
 
 #section-commentaires 
