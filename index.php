@@ -28,6 +28,10 @@
 
 		<!-- Style de base -->
 		<link rel="stylesheet" type="text/css" href="assets/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="assets/police/fontello/fontello.css"/>
+		<!--[if IE 7]>
+    		<link rel="stylesheet" href="assets/police/fontello/fontello-ie7.css">
+    	<![endif]-->
 
 		<!-- Script de base -->
 		<script type="text/javascript" src="assets/js/base.js">Vous devez activer JavaScript</script>
