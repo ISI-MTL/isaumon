@@ -4,8 +4,9 @@ function createConnection()
 	$host 	= "localhost";
 	$dbUser = "root";
 	$dbPw 	= "";
-
-	return mysql_connect($host, $dbUser, $dbPw);
+	$sql = mysql_connect($host, $dbUser, $dbPw);
+	mysql_query("SET NAMES UTF8");
+	return $sql;
 }
 
 function readData($dbName, $query)
