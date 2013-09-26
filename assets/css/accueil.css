@@ -162,14 +162,14 @@ article h2:nth-of-type(1){
 }
 #recettes ul li{
 	float:left;
-	font-size: 13px;
+	font-size: 16px;
 	font-weight: bold;
 }
 #recettes ul li a{
 	text-decoration:none;
 	color:#aaa;
 	float:left;
-	font-size: 13px;
+	
 	
 }
 #recettes ul li a:hover{
@@ -178,7 +178,7 @@ article h2:nth-of-type(1){
 	
 }
 #recettes ul li:first-child{
-	margin-right:47%;
+	margin-right:34%;
 }
 
 aside p{
