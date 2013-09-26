@@ -170,7 +170,7 @@ Recettes pour iSaumon.com
 
 10- Date: 2013/09/25
 
-11- Image:  (situé dans assets/img/recettes)
+11- Image:  (boucher_de_saumon_caramelisé.jpg situé dans assets/img/recettes)
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -287,4 +287,4 @@ Recettes pour iSaumon.com
 
 10- Date: 2013/09/25
 
-11- Image:  (situé dans assets/img/recettes)
+11- Image:  (Tarte_au_saumon_et_patate.jpg situé dans assets/img/recettes)
