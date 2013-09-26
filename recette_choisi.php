@@ -23,7 +23,7 @@ echo ($value."<br/>");
 <section id ="preparation">
 <h3>Preparation</h3>
 <?php 
-$preparation = explode(".", ($recette[0]['preparation']));
+$preparation = explode(";", ($recette[0]['preparation']));
 $prep_len = count($preparation);
 
 for($i=0 ; $i < ($prep_len-1); $i++){
