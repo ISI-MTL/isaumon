@@ -10,7 +10,7 @@
 			<li><img class="recette_image" src="assets/img/recettes/<?php echo($recette["img"]);?>">
 			<h2><?php echo($recette["titre"]);?></h2>
 			<p><?php echo($recette["commentaire"]);?></p>
-			<a href="recette_choisi.php?recette=<?php echo($recette["id"]) ?>">En savoir plus</a>
+			<a href="index.php?page=recette_choisi&recette=<?php echo($recette["id"]) ?>">En savoir plus</a>
 			</li>
 			<?php } ?>
 		</ul>
