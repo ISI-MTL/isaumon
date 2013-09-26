@@ -1,33 +1,52 @@
-.container h2{
-    text-align: center;
-    margin-right: 100px;
-    margin-left: 100px;
-    color: #D97652;
-    margin: 50px;
+.container .champsText{
+    padding-bottom: 5em;
 }
 
+button{
+    width: 20%;
+    background-color: #D97652;
+    margin-left: 40%;
+    margin-bottom: 2em;
+    font-size: 2vw;
+    color: #3F454E;
+    border-radius: 15px;
+}
+.container h2{
+    text-align: center;
+    color: #6b7381;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 1.8vw;
+    max-width: 100%;
+}
 
+#timbres{
+    margin-top: 2em;
+    width: 100%;
+}
 
 fieldset {
 padding: 0;
 margin: 0;
-width: 350px;
+width: 80%;
 }
 
 .container h3{
-    color: #4f5059;
+    color: #D97652;
     margin-bottom: 40px;
     margin-left: 10%;
+    font-size: 2vw;
+
 }
 
-
 .ensemble{
-    width: 90%;
-    margin-left: auto;
+     margin-left: auto;
+     border-color: #6b7381;
 }
 
 .champsText{
-    width: 500px;
+    width: 50%;
     border-radius:5px;
     float: left;
 }
@@ -37,7 +56,7 @@ input{
     width: 80%;
     height: 2em;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.1vw;
     border: solid;
     border-color: #D97652;
     border-radius:5px;
@@ -46,10 +65,10 @@ input{
 }
 
 .champsText textarea{
-    width: 350px;
-    height: 150px;
+    width: 80%;
+    height: 10em;
     border: solid;
-    border-radius: 5px;
+    border-radius: 5%;
     border-color: #D97652;
     margin-left: 10%;
 }
@@ -58,12 +77,9 @@ input{
 /*mise en forme de Amiez-vous ce site*/
 .champsText>label{
     color: #D97652;
-    font-size: 1.5em; 
+    font-size: 2vw; 
     margin-left: 50px;
-
-
 }
-
 
 .champsText fieldset{
 
@@ -74,9 +90,7 @@ height: 2em;
 .champsText fieldset:not(:checked) > input {
     position:absolute;
     top:0px;
-
-    clip:rect(0,0,0,0);
-    
+    clip:rect(0,0,0,0);   
 }
 
 .champsText fieldset:not(:checked) > label {
@@ -85,16 +99,15 @@ height: 2em;
     overflow:hidden;
     white-space:nowrap;
     cursor:pointer;
-    font-size:350%;
+    font-size: 5vw;
     color:#FD6B6B;
     text-shadow:1px 1px #501F1F, 2px 2px #FF6E6E, .1em .1em .2em rgba(107, 79, 79, 0.34);
-    padding:0.07em;
 }
 
 .champsText fieldset:not(:checked) > label:before {
-    content: '♥   ';
+    content: '♥';
     padding: 0px;
-    margin: 0px;
+    margin: 1px;
 }
 
 .champsText fieldset > input:checked ~ label {
