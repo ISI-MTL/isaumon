@@ -129,6 +129,13 @@ function get_id_recette($titre,$commt,$ingrdt,$portion ){
 	$id_recette = readData($db, $q);
 	return $id_recette;
 }
-
+// function get recette by nom
+function get_recette_by_id($id){
+	global $db ;
+	$table = 'recettes';
+	$q = "SELECT * FROM $table WHERE id='$id'";
+	$recette = readData($db, $q);
+	return $recette;
+}
 
 ?>
