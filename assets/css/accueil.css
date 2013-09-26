@@ -165,6 +165,18 @@ article h2:nth-of-type(1){
 	font-size: 13px;
 	font-weight: bold;
 }
+#recettes ul li a{
+	text-decoration:none;
+	color:#aaa;
+	float:left;
+	font-size: 13px;
+	
+}
+#recettes ul li a:hover{
+	color:black;
+	
+	
+}
 #recettes ul li:first-child{
 	margin-right:47%;
 }
