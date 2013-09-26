@@ -9,5 +9,5 @@
 
 ?>
 <div class="container">
-Recette choisi
+	Recette choisi
 </div>
