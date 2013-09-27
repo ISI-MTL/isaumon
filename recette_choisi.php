@@ -1,12 +1,12 @@
 <?php 
-	require_once("/recettes/recettes_manager.php.inc");
+	require_once("recettes/recettes_manager.php.inc");
 	if (isset($_GET['recette'])) {
 		$recette=get_recette_by_id($_GET['recette']);
 	}
 ?>
 <div class="container">
 <h2><?php echo($recette[0]['titre']); ?></h2>
-<img src="assets/img/recettes/<?php echo($recette[0]["img"])?>">
+<img src="assets/img/Recettes/<?php echo($recette[0]["img"])?>">
 
 <!-- la section Ingredient -->
 <section id="ingredient">
