@@ -1,16 +1,20 @@
+/*
+Index
+1. Mise en forme des champs texte de remplisage
+2. Mise en forme d'aimiez-vous ce site
+3. Mise en forme du boutton
+*/
+
+
+/*===========================================*/
+/* 1.  mise en forme des champs de remplisage*/
+/*===========================================*/
+
+
 .container .champsText{
     padding-bottom: 5em;
 }
 
-button{
-    width: 20%;
-    background-color: #D97652;
-    margin-left: 40%;
-    margin-bottom: 2em;
-    font-size: 2vw;
-    color: #3F454E;
-    border-radius: 15px;
-}
 .container h2{
     text-align: center;
     color: #6b7381;
@@ -68,13 +72,22 @@ input{
     width: 80%;
     height: 10em;
     border: solid;
-    border-radius: 5%;
+    border-radius: 5px;
     border-color: #D97652;
     margin-left: 10%;
 }
 
+.champsText *:focus{
+    border: solid, 5px;
+   
+    border-radius: 5px;
+    border-color: #77FF19;
+    margin-left: 10%;
+}
 
-/*mise en forme de Amiez-vous ce site*/
+/*===========================================*/
+/* 2. mise en forme de Amiez-vous ce site*/
+/*===========================================*/
 .champsText>label{
     color: #D97652;
     font-size: 2vw; 
@@ -135,4 +148,17 @@ height: 2em;
     position:relative;
     top:2px;
     left:2px;
+}
+
+/*===========================================*/
+/* 3. Mise en forme du boutton*/
+/*===========================================*/
+button{
+    width: 20%;
+    background-color: #D97652;
+    margin-left: 40%;
+    margin-bottom: 2em;
+    font-size: 2vw;
+    color: #3F454E;
+    border-radius: 15px;
 }
