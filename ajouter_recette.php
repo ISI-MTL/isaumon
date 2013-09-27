@@ -47,7 +47,7 @@ if(isset($_SESSION['img'])){
 }
 
 
-
+mysql_query("SET NAMES UTF8");
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,66 +55,64 @@ if(isset($_SESSION['img'])){
 		<meta charset="utf-8"/>
 		<title>Ajouter recette</title>
 		<meta name="" content=""/>
-		<style>
-			.label{
-				padding-right: 50px;
-				text-align: right;		
-			}
-			.input{
-				margin-right: 20px;
-			}
-			
-		</style>		
+		<link rel="stylesheet" type="text/css" href="assets/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/ajouter_recette.css"/>
+				
 	</head>
 	<body>
-		<form action="traitement_Ajrct.php.inc" method="POST">
-			<p>
-				<label for="titre"> <strong class="label"> Titre: </strong></label>
-				<input class="input" id="titre" type="text" name="titre" value="<?php echo($titre);?>"/>
-			</p>
-			<p>
-				<label for="commt"> <strong class="label">Description: </strong></label>
-				<textarea class="input" id="commt" rows="5" cols="50" name="commt" ><?php echo($commt);?></textarea>
-			</p>
-			<p>
-				<label for="ingrd"> <strong class="label">Ingredients: </strong></label>
-				<textarea class="input" id="ingrd" rows="5" cols="50" name="ingrd"><?php echo($ingrd);?></textarea>
-			</p>
-			<p>
-				<label for="portion"> <strong class="label">Portion: </strong></label>
-				<input class="input" id="portion" type="text" name="portion" value="<?php echo($portion);?>"/>			
-				<label for="mdcuis"> <strong class="label">Mode de cuisson: </strong></label>
-				<select class="input" id="mdcuis" name="mdcuis" value="<?php echo($mdcuis);?>">
-						<option value="Four">Four</option>
-						<option value="Pôle">Pôle</option>
-						<option value="Microonde">Microonde</option>
-						<option value="Plaque">Plaque</option>
-				</select>
-			</p>
-			<p>
-				<label for="tpspre"> <strong class="label">Temps de preparation: </strong></label>
-				<input class="input" id="tpspre" type="text" name="tpspre" value="<?php echo($tpspre);?>"/>			
-				<label for="tpscuis"> <strong class="label">Temps de cuisson: </strong></label>
-				<input class="input" id="tpscuis" type="text" name="tpscuis" value="<?php echo($tpscuis);?>"/>
-			</p>
-			<p>
-				<label for="preparat"> <strong>Preparation: </strong></label>
-				<textarea class="input" id="preparat" rows="6" cols="50" name="preparat"><?php echo($preparat);?></textarea>
-			</p>
-			<p>
-				<label for="evalue"> <strong class="label">Evaluation: </strong></label>
-				<input class="input" id="evalue" type="text" name="evalue" value="<?php echo($evalue);?>"/>
-			</p>
-			<!--<p>
-				<label for="date"> <strong class="label">Date de publication: </strong></label>
-				<input class="input" id="date" type="date" name="date" />
-			</p>-->
-			<p>
-				<label for="img"> <strong class="label">Nom de l'image du recette: </strong></label>
-				<input class="input" id="img" type="text" name="img" value="<?php echo($img);?>"/>
-			</p>
-			<input class="bouton" type="reset" value="Effacer"/>		
-			<input class="bouton" type="submit" value="Enregistrer" />
-		</form>
+		<div>
+			<h2>Formulaire d'ajout des recettes</h2>
+			<form action="traitement_Ajrct.php.inc" method="POST">
+				<p>
+					<label for="titre"> <strong class="label"> Titre: </strong></label>
+					<textarea class="input" id="titre" rows="1" cols="50" name="titre" ><?php echo($titre);?></textarea>
+				</p>
+				<p>
+					<label for="commt"> <strong class="label">Description: </strong></label>
+					<textarea class="input" id="commt" rows="5" cols="50" name="commt" ><?php echo($commt);?></textarea>
+				</p>
+				<p>
+					<label for="ingrd"> <strong class="label">Ingredients: </strong></label>
+					<textarea class="input" id="ingrd" rows="5" cols="50" name="ingrd"><?php echo($ingrd);?></textarea>
+				</p>
+				<p>
+					<label for="portion"> <strong class="label">Portion: </strong></label>
+					<input class="input" id="portion" type="text" name="portion" value="<?php echo($portion);?>"/>				</p>
+				<p>
+					<label for="mdcuis"> <strong class="label">Mode de cuisson: </strong></label>
+					<select class="input" id="mdcuis" name="mdcuis" value="<?php echo($mdcuis);?>">
+							<option value="Four">Four</option>
+							<option value="Pôle">Pôle</option>
+							<option value="Microonde">Microonde</option>
+							<option value="Plaque">Plaque</option>
+					</select>
+				</p>
+				<p>
+					<label for="tpspre"> <strong class="label">Temps de preparation: </strong></label>
+					<input class="input" id="tpspre" type="text" name="tpspre" value="<?php echo($tpspre);?>"/>				</p>
+				<p>
+					<label for="tpscuis"> <strong class="label">Temps de cuisson: </strong></label>
+					<input class="input" id="tpscuis" type="text" name="tpscuis" value="<?php echo($tpscuis);?>"/>
+				</p>
+				<p>
+					<label for="preparat"> <strong class="label">Preparation: </strong></label>
+					<textarea class="input" id="preparat" rows="6" cols="50" name="preparat"><?php echo($preparat);?></textarea>
+				</p>
+				<p>
+					<label for="evalue"> <strong class="label">Evaluation: </strong></label>
+					<input class="input" id="evalue" type="text" name="evalue" value="<?php echo($evalue);?>"/>
+				</p>
+				<!--<p>
+					<label for="date"> <strong class="label">Date de publication: </strong></label>
+					<input class="input" id="date" type="date" name="date" />
+				</p>-->
+				<p>
+					<label for="img"> <strong class="label">Nom de l'image du recette: </strong></label>
+					<input class="input" id="img" type="text" name="img" value="<?php echo($img);?>"/>
+				</p>					
+				<input class="bouton" type="submit" value="Enregistrer" />
+				<input class="bouton" type="reset" value="Effacer"/>	
+			</form>
+		</div>
 	</body>
 </html>

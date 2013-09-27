@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once("recettes/recettes_manager.php.inc");
-
+mysql_query("SET NAMES UTF8");
 $recette = array();
 // mettre les données en session
 if(isset($_POST['titre'])){
@@ -47,7 +47,7 @@ if(is_numeric($_POST['portion']) && is_numeric($_POST['tpspre'])
    &&isset($_POST['evalue']) &&isset($_POST['img'])
    ){
    	$recette['titre'] = $_POST['titre'];
-	$recette['commentaire'] = $_POST['commt'];
+	$recette['commentaire'] = addslashes($_POST['commt']);
 	$recette['ingredients']= addslashes($_POST['ingrd']) ;
 	$recette['portion'] = $_POST['portion']+0;
 	$recette['tpspreparation'] = $_POST['tpspre']+0;
@@ -56,7 +56,7 @@ if(is_numeric($_POST['portion']) && is_numeric($_POST['tpspre'])
 	$recette['preparation'] = addslashes($_POST['preparat']);
 	/*$recette['date'] = $_POST['date'];*/
 	$recette['evaluation'] = $_POST['evalue']+0;
-	$recette['img'] = $_POST['img'];	
+	$recette['img'] = $_POST['img'] ;	
 	}
 	//var_dump($recette);
 	$insert = FALSE;
