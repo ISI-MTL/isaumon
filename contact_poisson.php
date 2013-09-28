@@ -8,13 +8,13 @@
 
 <!-- ================================================================= -->
 <div class="container">
-	<h1>Gardez Contact</h1>
+	<h1>Gardez contact</h1>
 	<img id="timbres" src="assets\img\timbres\timbres-poisson.png">
 	<h2>Réagissez à notre blog ou faites-nous parvenir vos commentaires,<br>votre avis est important</h2>
 
 	<form class= "ensemble" action = "traitement_contact.php.inc" method = "POST">
 		<div class= "champsText">
-			<h3>Vos coordonés</h3>
+			<h3>Vos coordonnées</h3>
 			<label> Prénom : </label>
 				<input  type="text" placeholder="p.ex. Jean-François"  name="prenom" pattern="^[a-zA-Z][a-zA-Z-_\.\s]{1,20}$" title="Veuillez introduire votre prénom s'il vous plaît" required="required" value=""/> 	
 	    	<br>
