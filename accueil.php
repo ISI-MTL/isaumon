@@ -24,7 +24,7 @@
 		
 		</div>
 		<aside>
-			<h2>Huiler son cerveau </h2>
+			<h2>Huiler son cerveau</h2>
 
 			<p>De la même façon qu’une machine a besoin d’huile pour fonctionner correctement, le cerveau demande de l'huile et des g				ras pour remplir toutes les fonctions qui lui incombent. Plus spécifiquement de lipides de type oméga-3.En effet, diverses études montrent les effets bénéfiques de ce lipide sur le cerveau en particulier.Il a été démontré que la consommation des acides gras omega-3 peut aider à diminuer l’anxiété. </p>
 
